@@ -31,7 +31,8 @@ const Navbar = () => {
         className="font-display text-xl cursor-pointer"
         onClick={() => scrollToSection('hero')}
       >
-        LM<span className="text-accent">.</span>
+        L<span className="text-accent">.</span>
+        M<span className="text-accent">.</span>
       </div>
       
       <ul className="hidden md:flex gap-8 list-none">

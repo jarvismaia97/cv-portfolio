@@ -13,14 +13,15 @@ const skills: Skill[] = [
   { name: 'Angular', size: 1.2, angle: 0.5, color: '#dd0031', category: 'tech' },
   { name: 'Node.js', size: 1.15, angle: 1.0, color: '#68a063', category: 'tech' },
   { name: 'React', size: 1.25, angle: 1.5, color: '#61dafb', category: 'tech' },
-  { name: 'SQL', size: 1.0, angle: 2.0, color: '#336791', category: 'tech' },
+  { name: 'Zod', size: 1.0, angle: 2.0, color: '#336791', category: 'tech' },
+  { name: 'Prisma', size: 1.0, angle: 2.0, color: '#336719', category: 'tech' },
   { name: 'Docker', size: 1.1, angle: 2.5, color: '#2496ed', category: 'tech' },
-  { name: 'PHP', size: 0.9, angle: 3.0, color: '#777bb4', category: 'tech' },
+  { name: 'Bun', size: 0.9, angle: 3.0, color: '#777bb4', category: 'tech' },
+  { name: 'ElsyiaJS', size: 0.85, angle: 5.0, color: '#0078d4', category: 'tech' },
   { name: 'JavaScript', size: 1.05, angle: 3.5, color: '#f7df1e', category: 'tech' },
-  { name: 'CSS/HTML', size: 1.0, angle: 4.0, color: '#e44d26', category: 'tech' },
+  { name: 'Tailwind', size: 1.0, angle: 4.0, color: '#e44d26', category: 'tech' },
   { name: 'Git', size: 0.95, angle: 4.5, color: '#f05032', category: 'tech' },
-  { name: 'SharePoint', size: 0.85, angle: 5.0, color: '#0078d4', category: 'tech' },
-  { name: 'Azure', size: 0.8, angle: 5.5, color: '#0078d4', category: 'tech' },
+  { name: 'AWS', size: 0.8, angle: 5.5, color: '#0078d4', category: 'tech' },
   { name: 'Leadership', size: 1.2, angle: 0.25, color: '#00e5a0', category: 'soft' },
   { name: 'Problem Solving', size: 0.85, angle: 1.75, color: '#ff6b6b', category: 'soft' },
   { name: 'Communication', size: 0.8, angle: 2.75, color: '#dc382d', category: 'soft' },
@@ -29,7 +30,6 @@ const skills: Skill[] = [
   { name: 'Innovation', size: 1.0, angle: 5.75, color: '#ffd060', category: 'soft' },
 ];
 
-// Safely append alpha hex to a color (handles 3-digit hex)
 function colorWithAlpha(hex: string, alpha: string): string {
   // Expand 3-digit hex to 6-digit
   if (hex.length === 4) {
@@ -199,10 +199,7 @@ const SkillsConstellation = () => {
 
     const onScroll = () => {
       const rect = section.getBoundingClientRect();
-      // Use only the first 100vh of scroll within the section for the animation
-      // so the expansion happens while the constellation is still fully visible
       const scrollIntoSection = -rect.top;
-      // Animate over the scrollable portion of the section (total height - viewport)
       const scrollable = section.offsetHeight - window.innerHeight;
       if (scrollable <= 0) return;
       const progress = Math.max(0, Math.min(1, scrollIntoSection / scrollable));
@@ -212,7 +209,6 @@ const SkillsConstellation = () => {
       }
     };
 
-    // Animation loop — always running for gentle orbit effect
     let running = true;
     const animate = (time: number) => {
       if (!running) return;
@@ -265,10 +261,6 @@ const SkillsConstellation = () => {
           <h2 className="font-display" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 400 }}>
             Skill Constellation
           </h2>
-        </div>
-
-        <div style={{ position: 'absolute', bottom: '2rem', right: '1.5rem', fontFamily: "'IBM Plex Mono', monospace", fontSize: '0.75rem', color: '#6b6872' }}>
-          Scroll <span ref={progressTextRef} style={{ color: '#00e5a0', fontSize: '1rem' }}>0</span>%
         </div>
       </div>
     </section>
