@@ -1,0 +1,336 @@
+{ 
+    "intro": "Sou um ",
+    "intro0": "de Portugal",
+    "intro1":"full stacker",
+    "intro2": "Sou um ",
+    "intro3": "Programador, Estudante, Projetista, Projetista, Ninja",
+    "nav":{
+        "navLanguage":"PT/EN",
+        "navLanguageBtn": "setLanguage('en')",
+        "navHome": "Início",
+        "navAbout": "Sobre",
+        "navResume": "Currículo",
+        "navServices": "Serviços",
+        "navPortfolio": "Portfólio",
+        "navContact": "Entre em contacto"
+    },
+    "about":{
+        "aboutTitle1": "Sobre",
+        "aboutTitle2": "Mais sobre mim",
+        "aboutText1": "Olá, o meu nome é Luis e sou de Portugal, sou especialista em encontrar/desenhar e construir sistemas simples, mas eficazes. Estes sistemas normalmente são orientados ao utilizador final, o que significa que as ideias dos programadores e as dos utilizadores nem sempre estão alinhadas. Mas ambas as partes têm que fazer um esforço. Quanto a mim, considero-me um bom orientador e uma pessoa motivada a nível profissional capaz de alinhar essas ideias. A um nível mais pessoal acredito ser um bom comunicador e conselheiro com bom gosto para carros e um bom jogador de padel também. esteja à vontade para entrar em contato ou dar uma vista de olhos nos meus trabalhos anteriores na seção do portfólio.",
+        "birthday": "Data de Nascimento:",
+        "birthdayValue": "22 Abril 1997",
+        "website": "Site:",
+        "websiteValue": "www.lmaia-22.github.io/CV",
+        "phone": "Telemóvel:",
+        "phoneValue": "+351 pede-me",
+        "city": "Cidade:",
+        "cityValue": "Porto, Portugal",
+        "age": "Idade:",
+        "ageValue": "25",
+        "degree": "Grau de estudo:",
+        "degreeValue": "Licenciatura",
+        "email1": "Email:",
+        "email1Value":"luismsm14@gmail.com",
+        "freelance": "Freelance:",
+        "freelanceValue": "Disponível",
+        "aboutText2": "Um pouco mais sobre mim, adoro automação desde que descobri que era um pouco preguiçoso. Mas ser preguiçoso tem as suas vantagens, força-nos a encontrar maneiras de tornar a vida mais fácil para nós e para os outros, David Dunham diz que \"Eficiência é a preguiça inteligente\" e eu não poderia estar mais de acordo. Assim iniciei os meus estudos no Instituto Superior de Engenharia do Porto (ISEP) em 2015 no curso de Engenharia de Sistemas durante três anos. Em 2018 iniciei o meu estágio na Fundação Casa da Música como Técnico de Sistemas de Informação onde trabalhei com uma grande variedade de ferramentas, tais como SQL, PHP, HTML, CSS, Javascript, Sharepoint, Dynamics Nav, EDOC, o que me permitiu aprender novas competências e o mais importante, como comunicar com os clientes (colegas de trabalho). Por esse mesmo motivo, comecei a ter interesse em Pesquisar/Desenhar e construir soluções, neste caso aplicações web que facilitassem o trabalho através da análise de processos procurando pontos de melhoria. Às vezes a mais pequena mudança pode causar o maior impacto.",
+        "counts":{
+            "countProcess": "Processos Melhorados",
+            "countProjects": "Projetos",
+            "countHoursSupport": "Horas de Suporte",
+            "countHoursCoding": "Horas de Programação"
+        },
+        "aboutSkills": "Competências",
+        "interestsTitle": "Interesses",
+        "interests":{
+            "interest1": "Programar",
+            "interest2": "BlockChain",
+            "interest3": "Desenho e Impressão 3D",
+            "interest4": "Desenhar Processos",
+            "interest5": "Aprender novas tecnologias",
+            "interest6": "Cosntruir Computadores",
+            "interest7": "ETF's",
+            "interest8": "Robótica",
+            "interest9": "Padel",
+            "interest10": "Formula 1",
+            "interest11": "Corridas de carros",
+            "interest12": "Legos"
+        }
+    },
+    "resume":{
+        "resumeTitle": "Currículo",
+        "resumeTitle0": "Descubra o meu currículo",
+        "pdfDownload": "https://lmaia-22.github.io/CV/assets/docs/cv_Luis_Maia_PT.pdf",
+        "pdfDownloadText": "Faz download do meu CV",
+        "resumeTitle1": "Sumário",
+        "resumeSummary": "Sou um programador Web inovador, com mais de 4 anos de experiência desenhando e desenvolvendo sistemas orientados ao utilizador final. Extremamente motivado para melhorar constantemente as minhas competências e crescer profissionalmente. Estou confiante nas minhas capacidades para criar e desenvolver as funcionalidades/ferramentas que permitam o crescimento rápido da solução.",
+        "resumeTitle2": "Educação",
+        "resumeEduItem1":{
+            "resumeEduItem1Title": "Licenciatura em Engenharia Informática",
+            "resumeEduItem1Date": "2021 - Atualmente",
+            "resumeEduItem1Local": "Instituto Superior de Engenharia do Porto (ISEP), Portugal",
+            "resumeEduItem1Desc": "A informática está na base de todas as atividades da sociedade atual, desde aplicações aos sistemas inteligentes, passando pelas bases de dados empresariais."
+        },
+        "resumeEduItem2":{
+            "resumeEduItem2Title": "Certificado Microsoft - Adminsitração e Planeamento de SharePoint 2016",
+            "resumeEduItem2Date": "2020",
+            "resumeEduItem2Local": "Claranet",
+            "resumeEduItem2Desc": "O curso ensina como implementar, administrar e solucionar problemas no ambiente do SharePoint. Este curso também fornece diretrizes, práticas recomendadas e considerações que ajudam a otimizar a sua implementação."
+        },
+        "resumeEduItem3":{
+            "resumeEduItem3Title": "Mestrado em Sistemas Computacionais",
+            "resumeEduItem3Date": "2018 - inacabado",
+            "resumeEduItem3Local": "Instituto Superior de Engenharia do Porto (ISEP), Portugal",
+            "resumeEduItem3Desc": "A Engenharia Informática é transversal a todas as áreas de atividade e é a base para construir o futuro. Permite desenvolver soluções informáticas avançadas nas mais diversas áreas de atividade, tais como: comércio eletrónico, saúde, ambiente, seguros, banca, transportes, desporto, jogos, economia e redes sociais. Este mestrado dispõe das 4 grandes áreas de especialização de sistemas: sistemas computacionais, sistemas de informação e conhecimento, sistemas gráficos e multimédia e engenharia de software"
+        },
+        "resumeEduItem4":{
+            "resumeEduItem4Title": "Licenciatura em Engenharia de Sistemas",
+            "resumeEduItem4Date": "2015 - 2018",
+            "resumeEduItem4Local": "Instituto Superior de Engenharia do Porto (ISEP), Portugal",
+            "resumeEduItem4Desc": "A Engenharia de Sistemas integra uma abordagem interdisciplinar que envolve o levantamento de necessidades, planeamento, desenvolvimento e análise de sistemas que transformem conceitos em produtos e serviços de elevada qualidade. Concentra-se na criação e gestão de estruturas de desenvolvimento de processos para responder às necessidades do mercado e impulsionar a competitividade das organizações. A Engenharia de Sistemas agrega conhecimentos oriundos das áreas científicas da eletrotecnia e mecânica, assim como das áreas da informática, matemática aplicada e gestão."
+        },
+        "resumeTitle3": "Carreira Profissional",
+        "resumeProfItem1":{
+            "resumeProfItem1Title": "Técnico de Sistemas de Informação",
+            "resumeProfItem1Date": "2019 - Atualmente",
+            "resumeProfItem1Local": "Fundação Casa da Música, Porto, Portugal",
+            "resumeProfItem1Desc": {
+                "resumeProfItem1Desc1": "Helpdesk a mais de 200 utilizadores",
+                "resumeProfItem1Desc2": "Desenho da arquitetura, desenvolvimento e implementação de soluções informáticas",
+                "resumeProfItem1Desc3": "Dashboards internos construídos com HTML, JavaScript, CSS e PHP (MVC), para disponibilização de informações de diversas áreas",
+                "resumeProfItem1Desc4": "Delegação e acompanhamento de pedidos de desenvolvimento a terceiros que fornecem SaaS",
+                "resumeProfItem1Desc5": "Automatização de processos e procedimentos nas diversas áreas/departamentos aumentando a eficiência com que atingem os seus objetivos",
+                "resumeProfItem1Desc6": "Suporte de IT e Gestão Utilizadores"
+            }
+        },
+        "resumeProfItem2":{
+            "resumeProfItem2Title": "Estagiário de Sistemas de Informação",
+            "resumeProfItem2Date": "2018 - 2018",
+            "resumeProfItem2Local": "Fundação Casa da Música, Porto, Portugal",
+            "resumeProfItem2Desc": {
+                "resumeProfItem2Desc1": "Criação de uma aplicação WEB para catalogação de elementos multimídia, desenvolvido HTML, Javascript, CSS e PHP.",
+                "resumeProfItem2Desc2": "Avaliação e validação da nova Aplicação construída para o Restaurante Casa da Música.",
+                "resumeProfItem2Desc3": "Desenvolvimento de uma aplicação WEB em php que apresenta a informação dos eventos a decorrer e próximos, para serem apresentada no sistema de Digital Signage já implementado."
+            }
+        },
+        "resumeProfItem3":{
+            "resumeProfItem3Title": "Front-End Developer",
+            "resumeProfItem3Date": "Março 2023 - Present",
+            "resumeProfItem3Local": "MediaProbe, Porto, Portugal",
+            "resumeProfItem3Desc": {
+                "resumeProfItem3Desc1": "Desenvolver vários projetos em Angular",
+                "resumeProfItem3Desc2": "Construir novos endpoints para serem consumidos pelo frontend",
+                "resumeProfItem3Desc3": "Melhoramento da navegabilidade das aplicações"
+            }
+        }
+    },
+    "services":{
+        "servicesTitle": "Serviços",
+        "servicesTitle1": "Os meus serviços",
+        "services1":{
+            "service1Title": "Programador Web",
+            "service1Description": "Se tem uma ideia para um projeto e já tem a estrutura e design, eu posso ajudar a transformar isso em um site simples, mas também eficaz"
+        },
+        "services2":{
+            "service2Title": "Arquitetura e Design Web",
+            "service2Description": "Desenho mockups do site que deseja ver desenvolvido, discuto ideias e funcionalidades e ajudo-o a atingir o seu objetivo!"
+        },
+        "services3":{
+            "service3Title": "Analista de Soluções",
+            "service3Description": "Ofereço o meu know-how em múltiplas áreas para ajudá-lo a encontrar uma solução que atenda às suas necessidades tendo em consideração o futuro"
+        },
+        "services4":{
+            "service4Title": "Publicação e Hospedagem",
+            "service4Description": "Ajudo a configurar o local de hospedagem do site (Github, Azure, AWS), e a publicar na world wide web registrando o domínio e habilitando protocolos de segurança"
+        },
+        "services5":{
+            "service5Title": "Construir Marca",
+            "service5Description": "Ajudá-lo a crescer e conquistar o público certo, com engenharia social, pesquisa orgânica e com a implementação do Google Ads"
+        },
+        "services6":{
+            "service6Title": "Suporte de IT",
+            "service6Description": "Forneço ajuda com problemas comuns, como configuração de estações de trabalho e instalação de software, gestão de contas de utilizadores, rede e outros problemas"
+        }
+    },
+    "portfolio":{
+        "portfolioTitle1": "Portfólio",
+        "portfolioTitle2": "Meus Trabalhos",
+        "filters":{
+            "filter1": "Todos",
+            "filter2": "Sites",
+            "filter3": "Marcas",
+            "filter4": "Projetos"
+        },
+        "portfolio1":{
+            "portfolio1Title": "My Green FoodPrint",
+            "portfolio1Desc": "Site",
+            "portfolio1Title1": "My Green FoodPrint",
+            "portfolio1Title2": "Informação do Projeto",
+            "portfolio1Category": "Categoria: ",
+            "portfolio1CategoryValue": "Caso de estudo / desenvolvimento Web / Design",
+            "portfolio1Client": "Cliente: ",
+            "portfolio1ClientValue": "ISEP",
+            "portfolio1ProjectDate": "Data do Projeto: ",
+            "portfolio1ProjectDateValue": "17 Dezembro, 2021",
+            "portfolio1ProjectUrl": "Url do Projeto: ",
+            "portfolio1ProjectUrlValue": "https://mygreenfoodprint.bitbucket.io",
+            "portfolio1Desc1":"MyGreenFoodPrint é uma aplicação desenvolvida para ajudar a mudar pegada de carbono através dos alimentos. Ao mesmo tempo está a tornar o mundo num lugar melhor e mudando hábitos para ajudar a travar as mudanças climáticas, você também estará a mudar os seus hábitos alimentares para mais saudáveis que ajudará a melhorar a sua qualidade de vida."
+        },
+        "portfolio2":{
+            "portfolio2Title": "UniPessoal",
+            "portfolio2Desc": "Site",
+            "portfolio2Title1": "UniPessoal LDA",
+            "portfolio2Title2": "Informação do Projeto",
+            "portfolio2Category": "Categoria: ",
+            "portfolio2CategoryValue": "Desenvolvimento Web",
+            "portfolio2Client": "Cliente: ",
+            "portfolio2ClientValue": "Títulos & Assuntos - Unipessoal Lda",
+            "portfolio2ProjectDate": "Data do Projeto: ",
+            "portfolio2ProjectDateValue": "21 Dezembro, 2019",
+            "portfolio2ProjectUrl": "Url do Projeto: ",
+            "portfolio2ProjectUrlValue": "https://github.com/lmaia-22/Unipessoal-Website",
+            "portfolio2Desc1":"Unipessoal é um site desenvolvido para uma empresa de Construção Civil em 2019. Mas encerrou no final do ano de 2020. Atualmente o site está fora do ar mas podem encontrar o site no meu repositório do github."
+        },
+        "portfolio3":{
+            "portfolio3Title": "Currículo",
+            "portfolio3Desc": "Site",
+            "portfolio3Title1": "O meu Curriculo",
+            "portfolio3Title2": "Informação do Projeto",
+            "portfolio3Category": "Categoria",
+            "portfolio3CategoryValue": ": Desenvolvimento Web",
+            "portfolio3Client": "Cliente",
+            "portfolio3ClientValue": ": EU",
+            "portfolio3ProjectDate": "Data do Projeto",
+            "portfolio3ProjectDateValue": ": 12 Maio, 2022",
+            "portfolio3ProjectUrl": "Url do Projeto",
+            "portfolio3ProjectUrlValue": "https://lmaia-22.github.com/CV",
+            "portfolio3Desc1":"Este currículo é um 'Titanic' ajuda a quebrar o gelo com as pessoas e também ajuda a partilhar o meu trabalho, as minhas ideias, as minhas habilidades e capacidades com o mundo. Um site nos dias de hoje é mais permanente do que um simples pedaço de papel. Por isso decidi construir o meu próprio!"
+        },
+        "portfolio4":{
+            "portfolio4Title": "Gift Finder",
+            "portfolio4Desc": "Projeto",
+            "portfolio4Title1": "Gift Finder",
+            "portfolio4Title2": "Informação do Projeto",
+            "portfolio4Category": "Categoria",
+            "portfolio4CategoryValue": "Desenvolvimento Web",
+            "portfolio4Client": "Cliente",
+            "portfolio4ClientValue": "Mundo",
+            "portfolio4ProjectDate": "Data do Projeto",
+            "portfolio4ProjectDateValue": "20 Março, 2021",
+            "portfolio4ProjectUrl": "Url do Projeto",
+            "portfolio4ProjectUrlValue": "https://github.com/lmaia-22/gift_finder",
+            "portfolio4BlogUrl":"URL do Blog do Projeto: ",
+            "portfolio4BlogUrlValue":"https://github.com/lmaia-22/Gift_blog",
+            "portfolio4Desc1":"Um projeto em desenvolvimento para ajudar as pessoas a encontrar o melhor presente para dar aos amigos, familiares, entes queridos... em qualquer ocasião, aniversários, casamentos e outros! Com a ajuda da IA e um formulário com várias perguntas sobre a pessoa em questão, sugere as melhores ideias possíveis."
+        },
+        "portfolio5":{
+            "portfolio5Title": "Serviço de SMTP",
+            "portfolio5Desc": "Projeto",
+            "portfolio5Title1": "Serviço de SMTP",
+            "portfolio5Title2": "Informação do Projeto",
+            "portfolio5Category": "Categoria",
+            "portfolio5CategoryValue": "Desenvolvimento Web",
+            "portfolio5Client": "Cliente",
+            "portfolio5ClientValue": "EU",
+            "portfolio5ProjectDate": "Data do Projeto",
+            "portfolio5ProjectDateValue": "12 Setembro, 2019",
+            "portfolio5ProjectUrl": "Url do Projeto",
+            "portfolio5ProjectUrlValue": "https://lmaia-22.github.com/SMTP",
+            "portfolio5Desc1": "Para ter um formulário de contato em sites construídos eu desenvolvi uma aplicação em nodejs simples usando nodemailer e um serviço smtp (smtp2go)  e para hospedar este serviço utilizei a plataforma heroku."
+        },
+        "portfolio6":{
+            "portfolio6Title": "Robô Otto",
+            "portfolio6Desc": "Projeto",
+            "portfolio6Title1": "Robô Otto",
+            "portfolio6Title2": "Informação do Projeto",
+            "portfolio6Category": "Categoria: ",
+            "portfolio6CategoryValue": "Robótica",
+            "portfolio6Client": "Cliente: ",
+            "portfolio6ClientValue": "EU",
+            "portfolio6ProjectDate": "Data do Projeto: ",
+            "portfolio6ProjectDateValue": "12 Maio, 2021",
+            "portfolio6ProjectUrl": "Url do Projeto: ",
+            "portfolio6ProjectUrlValue": "https://www.ottodiy.com",
+            "portfolio6Desc1": "Com base neste projeto existente, decidi construir o Otto seguindo a documentação.Imprimi as peças na minha impressora 3D, comprei as peças eletrônicas e programei em C++."
+        },
+        "portfolio7":{
+            "portfolio7Title": "Robô Bombeiro",
+            "portfolio7Desc": "Projeto",
+            "portfolio7Title1": "Robô Bombeiro",
+            "portfolio7Title2": "Informação do Projeto",
+            "portfolio7Category": "Categoria: ",
+            "portfolio7CategoryValue": "Robótica",
+            "portfolio7Client": "Cliente: ",
+            "portfolio7ClientValue": "ISEP",
+            "portfolio7ProjectDate": "Data do Projeto: ",
+            "portfolio7ProjectDateValue": "29 Julho, 2017",
+            "portfolio7ProjectUrl": "Url do Projeto: ",
+            "portfolio7ProjectUrlValue": "https://www.isep.ipp.pt/new/viewnew/5391?fbclid=IwAR38ziUDcppEOnyWo3XRvF7kNWz1OgXYeGWIYfNFqiScSoa9flu4ZM_PnMM",
+            "portfolio7Desc1":"Este projeto começou no último ano de graduação onde precisávamos construir um robô que pudesse extinguir “incêndios” neste estudo de caso uma vela. O robô foi equipado com três sensores de proximidade e um sensor ultravioleta para detecção de chama, seguido de uma luz que permite a confirmação da correta indicação da fonte de calor. Este projeto levou-nos a participar no Concurso Nacional de Robótica do Instituto Politécnico da Guarda."
+        },
+        "portfolio8":{
+            "portfolio8Title": "Designer de Móveis",
+            "portfolio8Desc": "Projeto",
+            "portfolio8Title1": "Designer de Móveis",
+            "portfolio8Title2": "Informação do Projeto",
+            "portfolio8Category": "Categoria: ",
+            "portfolio8CategoryValue": "Projeto",
+            "portfolio8Client": "Cliente: ",
+            "portfolio8ClientValue": "EU",
+            "portfolio8ProjectDate": "Data do Projeto: ",
+            "portfolio8ProjectDateValue": "29 Julho, 2017",
+            "portfolio8ProjectUrl": "Url do Projeto: ",
+            "portfolio8ProjectUrlValue": "https://www.isep.ipp.pt/new/viewnew/5391?fbclid=IwAR38ziUDcppEOnyWo3XRvF7kNWz1OgXYeGWIYfNFqiScSoa9flu4ZM_PnMM",
+            "portfolio8Desc1":"Comecei a desenhar móveis, porque tinha o espaço e as ferramentas para o fazer! E fazer coisas diferentes é a minha especialidade. Então eu meço o espaço levando em consideração o tamanho, armazenamento e gerenciamento de cabos e pontos de conexão. Então eu começo a desenhá-lo no Openscad. Assim que tivermos uma versão final pronta, começamos a construí-la."
+        },
+        "portfolio9":{
+            "portfolio9Title": "Móveis com leds",
+            "portfolio9Desc": "Projeto",
+            "portfolio9Title1": "Móveis com leds",
+            "portfolio9Title2": "Informação do Projeto",
+            "portfolio9Category": "Categoria: ",
+            "portfolio9CategoryValue": "Robótica",
+            "portfolio9Client": "Cliente: ",
+            "portfolio9ClientValue": "ISEP",
+            "portfolio9ProjectDate": "Data do Projeto: ",
+            "portfolio9ProjectDateValue": "29 Julho, 2017",
+            "portfolio9ProjectUrl": "Url do Projeto: ",
+            "portfolio9ProjectUrlValue": "https://www.isep.ipp.pt/new/viewnew/5391?fbclid=IwAR38ziUDcppEOnyWo3XRvF7kNWz1OgXYeGWIYfNFqiScSoa9flu4ZM_PnMM",
+            "portfolio9Desc1": "Eu decidi colocar fitas de led no móvel reagindo ao som. Então resolvi por fitas led endereçáveis ​​WS2812b 5v e uma caixa de som com microfone embutido e um conector bluetooth. Com uma App para telemóvel que se conecta à caixa de som via bluetooh e permite programar a faixa de led individualmente. Para ligar tudo, comprei uma fonte de alimentação de 250W com um interruptor no meio para ligar e desligar todas as fitas de leds."
+        },
+        "portfolio10":{
+            "portfolio10Title": "Certificado Microsoft - Adminsitração e Planeamento de SharePoint 2016",
+            "portfolio10Desc": "Projeto",
+            "portfolio10Title1": "Certificado Microsoft - Adminsitração e Planeamento de SharePoint 2016",
+            "portfolio10Title2": "Informação do Curso",
+            "portfolio10Category": "Categoria: ",
+            "portfolio10CategoryValue": "SharePoint 2016",
+            "portfolio10Client": "Cliente: ",
+            "portfolio10ClientValue": "Eu",
+            "portfolio10ProjectDate": "Data do Projeto: ",
+            "portfolio10ProjectDateValue": "08 Outubro, 2020",
+            "portfolio10ProjectUrl": "Url do Projeto: ",
+            "portfolio10ProjectUrlValue": "Sem link Disponível",
+            "portfolio10Desc1": "O curso ensina como implementar, administrar e solucionar problemas no ambiente do SharePoint. Este curso também fornece diretrizes, práticas recomendadas e considerações que ajudam a otimizar a sua implementação."
+        }
+    },
+    "contact":{
+        "contactTitle1": "Contacto",
+        "contactTitle2": "Entra em Contacto",
+        "contactAdress1": "Localização",
+        "contactAdress2": "Porto, Portugal",
+        "contactSocial": "Redes Sociais",
+        "contactEmail1": "Manda-me um email",
+        "contactEmail2": "luismsm14@gmail.com",
+        "contactPhone1": "Liga-me",
+        "contactPhone2": "+351 pede-me",
+        "form":{
+            "name": "O seu nome",
+            "email": "O seu email",
+            "subject": "Assunto",
+            "message": "Mensagem",
+            "liveAlertBtn": "Enviar Mensagem"
+        }
+    }
+}

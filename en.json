@@ -1,0 +1,336 @@
+{ 
+    "intro": "I'm a passionate",
+    "intro0": "from Portugal",
+    "intro1":"full stacker",
+    "intro2": "I'm a",
+    "intro3": "Developer, Student, Designer, Freelancer, Ninja on free times",
+    "nav":{
+        "navLanguage":"PT/EN",
+        "navLanguageBtn": "setLanguage('pt')",
+        "navHome": "Home",
+        "navAbout": "About",
+        "navResume": "Resume",
+        "navServices": "Services",
+        "navPortfolio": "Portfolio",
+        "navContact": "Contact"
+    },
+    "about":{
+        "aboutTitle1": "About",
+        "aboutTitle2": "Learn more about me",
+        "aboutText1": "I'm Luis Maia from Portugal, currently working as a Front-End Developer at MediaProbe. I specialize in crafting straightforward, yet highly efficient coding solutions with a keen emphasis on user requirements. I have a knack for bridging the gap between frontend and backend developers through my guidance and motivation. On a personal level, I'm a proficient communicator and advisor, with a passion for cars and paddle tennis. Feel free to peruse my portfolio and don't hesitate to reach out.",
+        "birthday": "Birthday:",
+        "birthdayValue": "22 April 1997",
+        "website": "Website:",
+        "websiteValue": "www.lmaia-22.github.io/CV",
+        "phone": "Phone:",
+        "phoneValue": "+351 ask for it",
+        "city": "City:",
+        "cityValue": "Porto, Portugal",
+        "age": "Age:",
+        "ageValue": "25",
+        "degree": "Degree:",
+        "degreeValue": "Graduation",
+        "email1": "Email:",
+        "email1Value":"luismsm14@gmail.com",
+        "freelance": "Freelance:",
+        "freelanceValue": "Available",
+        "aboutText2": "A little more about me, I love automation since I found out I was bit lazy. But being lazy has it's perks, it force us to find ways to make life easier for ourselves as well as others, David Dunham says that \"Efficiency is intelligent laziness\" and I couldn't agree more. So I began my studies in Higher Institute of Engineering in Porto (ISEP) in 2015 taking the course of Systems Engineering for three years. In 2018 I began my internship in Fundação Casa da Música as a Information Systems Technician where I worked with a great variety of tools, wich allowed my to learn new skills and most important, on how to comunicate with our clients (work colleagues). For that reason, I began to have interest in Searching/Designing and building solutions, in this case web applications that would make the work 'easier' through analysis of processes and finding points of improvement, sometimes the smallest change can cause the biggest impact.",
+        "counts":{
+            "countProcess": "Processes Improved",
+            "countProjects": "Projects",
+            "countHoursSupport": "Hours Of Support",
+            "countHoursCoding": "Hours of Coding"
+        },
+        "aboutSkills": "Skills",
+        "interestsTitle": "Interests",
+        "interests":{
+            "interest1": "Coding",
+            "interest2": "BlockChain",
+            "interest3": "3D render & Printing",
+            "interest4": "Breakdown processes",
+            "interest5": "Learning new things",
+            "interest6": "Building Computers",
+            "interest7": "ETF's",
+            "interest8": "Robotic",
+            "interest9": "Padel",
+            "interest10": "Formula 1",
+            "interest11": "MotorSport",
+            "interest12": "Legos"
+        }
+    },
+    "resume":{
+        "resumeTitle": "Resume",
+        "resumeTitle0": "Check My Resume",
+        "pdfDownload": "https://lmaia-22.github.io/CV/assets/docs/cv_Luis_Maia_EN.pdf",
+        "pdfDownloadText": "Download my Resume",
+        "resumeTitle1": "Summary",
+        "resumeSummary": "I believe I am an innovative and deadline-driven web developer with over four years of experience in designing and developing user-oriented systems. I see myself as a motivated self-starter, capable of sparking interest and taking initiative to facilitate and assist others with their recurring tasks. I'm a creative and out-of-the-box thinker, able to envision solutions beyond today's immediate needs.",
+        "resumeTitle2": "Education",
+        "resumeEduItem1":{
+            "resumeEduItem1Title": "Degree in Computer Science and engineering",
+            "resumeEduItem1Date": "2021 - current",
+            "resumeEduItem1Local": "Higher Institute of Engineering of Porto (ISEP), Portugal",
+            "resumeEduItem1Desc": "Information technology is at the base of all activities in today's society, from applications to intelligent systems, passing through corporate databases. Computer Science and Engineering includes the design and development of software, information systems, network administration and security and data processing."
+        },
+        "resumeEduItem2":{
+            "resumeEduItem2Title": "Microsoft Certificate - Planning and Administering SharePoint 2016",
+            "resumeEduItem2Date": "2020",
+            "resumeEduItem2Local": "Claranet",
+            "resumeEduItem2Desc": "The course teaches you how to deploy, administer, and troubleshoot your SharePoint environment. This course also provides guidelines, best practices, and considerations that help you optimize your SharePoint deployment."
+        },
+        "resumeEduItem3":{
+            "resumeEduItem3Title": "Master's in Computer Systems",
+            "resumeEduItem3Date": "2018 - unfinished",
+            "resumeEduItem3Local": "Higher Institute of Engineering of Porto (ISEP), Portugal",
+            "resumeEduItem3Desc": "Computer Engineering is transversal to all areas of activity and is the basis for building the future. It allows the development of advanced IT solutions in the most diverse areas of activity, such as: e-commerce, health, environment, insurance, banking, transport, sports, games, economy and social networks."
+        },
+        "resumeEduItem4":{
+            "resumeEduItem4Title": "Degree in Systems Engineering",
+            "resumeEduItem4Date": "2015 - 2018",
+            "resumeEduItem4Local": "Higher Institute of Engineering of Porto (ISEP), Portugal",
+            "resumeEduItem4Desc": "Systems Engineering integrates an interdisciplinary approach that involves the assessment of needs, planning, development and analysis of systems that transform concepts into high quality products and services. It focuses on creating and managing process development structures to respond to market needs and boost the competitiveness of organizations. Systems Engineering aggregates knowledge from the scientific areas of electrotechnics and mechanics, as well as from the areas of information technology, applied mathematics and management."
+        },
+        "resumeTitle3": "Professional Experience",
+        "resumeProfItem1":{
+            "resumeProfItem1Title": "Information Systems Technician",
+            "resumeProfItem1Date": "2019 - March 2023",
+            "resumeProfItem1Local": "Fundação Casa da Música, Porto, Portugal",
+            "resumeProfItem1Desc": {
+                "resumeProfItem1Desc1": "Helpdesk service to more then 200 people",
+                "resumeProfItem1Desc2": "Design, development, and implementation of solutions",
+                "resumeProfItem1Desc3": "Internal dashboards built with HTML, JavaScript, CSS and PHP (MVC), for providing information from different areas",
+                "resumeProfItem1Desc4": "Delegate tasks to the outsource companies that provide applications as a service.",
+                "resumeProfItem1Desc5": "Help the various departments find points of improvement and find new solutions that helps them achieve their goals",
+                "resumeProfItem1Desc6": "IT Support and User Account Manager"
+            }
+        },
+        "resumeProfItem2":{
+            "resumeProfItem2Title": "Intern Information Systems Technician",
+            "resumeProfItem2Date": "2018 - 2018",
+            "resumeProfItem2Local": "Fundação Casa da Música, Porto, Portugal",
+            "resumeProfItem2Desc": {
+                "resumeProfItem2Desc1": "Replace an XML file creation program for cataloging elements multimedia, written in Visual Basic, by a web form, written in HTML, Javascript, CSS and PHP language.",
+                "resumeProfItem2Desc2": "Assessment and validation of new Application built for Casa da Musica restaurant.",
+                "resumeProfItem2Desc3": "Create a dynamic php page based on information from Current and next events to happen in Casa da Música, to be displayed on the Digital Signage system that Casa da Música is implementing."
+            }
+        },
+        "resumeProfItem3":{
+            "resumeProfItem3Title": "Front-End Developer",
+            "resumeProfItem3Date": "March 2023 - Present",
+            "resumeProfItem3Local": "MediaProbe, Porto, Portugal",
+            "resumeProfItem3Desc": {
+                "resumeProfItem3Desc1": "Working on multiple projects with Angular",
+                "resumeProfItem3Desc2": "Building some new endpoints in typescript",
+                "resumeProfItem3Desc3": "Improve application navagability"
+            }
+        }
+    },
+    "services":{
+        "servicesTitle": "Services",
+        "servicesTitle1": "My Services",
+        "services1":{
+            "service1Title": "Web Development",
+            "service1Description": "If you have an idea for a project and a already a structure and design I can help you turn that into a simple but also beautiful website"
+        },
+        "services2":{
+            "service2Title": "Architecture and Design Web",
+            "service2Description": "Draw mockups of the website you want to see build, discuss ideas and functionality and help you achieve your goal!"
+        },
+        "services3":{
+            "service3Title": "Solutions Consultant Analyst",
+            "service3Description": "I offer my know-how in multiples areas of expertise to help you search a solution that fits your needs considering the future"
+        },
+        "services4":{
+            "service4Title": "Deployment and Hosting",
+            "service4Description": "Help configure hosting for a website(Github, Azure, AWS), deploy to the world wide web by registering the domain and enabling secure protcols"
+        },
+        "services5":{
+            "service5Title": "Building Brand",
+            "service5Description": "Help you grow and gain the right audience, with Social Engineering, Organical searching and with the Implementation of Google Ads"
+        },
+        "services6":{
+            "service6Title": "IT Support",
+            "service6Description": "Help with ordinary problems, such as workstations configuration and software installation, user accounts management, networking and other issues"
+        }
+    },
+    "portfolio":{
+        "portfolioTitle1": "Portfolio",
+        "portfolioTitle2": "My Works",
+        "filters":{
+            "filter1": "All",
+            "filter2": "Website",
+            "filter3": "Brand",
+            "filter4": "Project"
+        },
+        "portfolio1":{
+            "portfolio1Title": "My Green FoodPrint",
+            "portfolio1Desc": "Website",
+            "portfolio1Title1": "My Green FoodPrint",
+            "portfolio1Title2": "Project information",
+            "portfolio1Category": "Category: ",
+            "portfolio1CategoryValue": "Case Study /Web design / Mockups",
+            "portfolio1Client": "Client: ",
+            "portfolio1ClientValue": "ISEP",
+            "portfolio1ProjectDate": "Project date: ",
+            "portfolio1ProjectDateValue": "17 December, 2021",
+            "portfolio1ProjectUrl": "Project URL: ",
+            "portfolio1ProjectUrlValue": "https://mygreenfoodprint.bitbucket.io",
+            "portfolio1Desc1":"MyGreenFoodPrint is an app developed to help you to change your carbon footprint through food. At the same time you are making the world a better place and changing habits to stop climate changes, you will be also implementing healthier food habits which will impact your life quality."
+        },
+        "portfolio2":{
+            "portfolio2Title": "UniPessoal",
+            "portfolio2Desc": "Website",
+            "portfolio2Title1": "UniPessoal LDA",
+            "portfolio2Title2": "Project information",
+            "portfolio2Category": "Category: ",
+            "portfolio2CategoryValue": "Website Development",
+            "portfolio2Client": "Client: ",
+            "portfolio2ClientValue": "Títulos & Assuntos - Unipessoal Lda",
+            "portfolio2ProjectDate": "Project date: ",
+            "portfolio2ProjectDateValue": "21 December, 2019",
+            "portfolio2ProjectUrl": "Project URL: ",
+            "portfolio2ProjectUrlValue": "https://github.com/lmaia-22/Unipessoal-Website",
+            "portfolio2Desc1":"Unipessoal is a website developed for a Construction Company in 2019. But shutdown later in the year 2020. Currently the website is down but you can find the work in my github repository."
+        },
+        "portfolio3":{
+            "portfolio3Title": "My Curriculum",
+            "portfolio3Desc": "Website",
+            "portfolio3Title1": "My Curriculum",
+            "portfolio3Title2": "Project information",
+            "portfolio3Category": "Category: ",
+            "portfolio3CategoryValue": "Website Development",
+            "portfolio3Client": "Client: ",
+            "portfolio3ClientValue": "Myself",
+            "portfolio3ProjectDate": "Project date: ",
+            "portfolio3ProjectDateValue": "12 May, 2022",
+            "portfolio3ProjectUrl": "Project URL: ",
+            "portfolio3ProjectUrlValue": "https://lmaia-22.github.com/CV",
+            "portfolio3Desc1":"This curriculum is a 'Titanic' helps break the ice with people and also helps to share my work, my ideas, my skills and capabalities with the world. A website now a days is more permanent then a simple piece of paper. Therefore I decided to built my own!"
+        },
+        "portfolio4":{
+            "portfolio4Title": "Gift Finder",
+            "portfolio4Desc": "Project",
+            "portfolio4Title1": "Gift Finder",
+            "portfolio4Title2": "Project information",
+            "portfolio4Category": "Category: ",
+            "portfolio4CategoryValue": "Tool Development",
+            "portfolio4Client": "Client: ",
+            "portfolio4ClientValue": "WorldWide",
+            "portfolio4ProjectDate": "Project date: ",
+            "portfolio4ProjectDateValue": "12 February, 2021",
+            "portfolio4ProjectUrl": "Project URL: ",
+            "portfolio4ProjectUrlValue": "https://github.com/lmaia-22/gift_finder",
+            "portfolio4BlogUrl":"Blog of Project URL: ",
+            "portfolio4BlogUrlValue":"https://github.com/lmaia-22/Gift_blog",
+            "portfolio4Desc1":"A work in progress to help others finding the best present to give to friends, family, love ones... in any occasion, birthdays, weddings and others! With the help of AI and a form with multiple questions about the person in question try to suggest the best ideas possible."
+        },
+        "portfolio5":{
+            "portfolio5Title": "SMTP Service",
+            "portfolio5Desc": "Project",
+            "portfolio5Title1": "SMTP Service",
+            "portfolio5Title2": "Project information",
+            "portfolio5Category": "Category: ",
+            "portfolio5CategoryValue": "Website Development",
+            "portfolio5Client": "Client: ",
+            "portfolio5ClientValue": "Myself",
+            "portfolio5ProjectDate": "Project date: ",
+            "portfolio5ProjectDateValue": "12 September, 2019",
+            "portfolio5ProjectUrl": "Project URL: ",
+            "portfolio5ProjectUrlValue": "https://github.com/lmaia-22/LM-SMTP",
+            "portfolio5Desc1": "To have a contact form on built websites I develop a simple nodejs application using nodemailer and a smtp service (smtp2go) to host this service. I deployed this service in the plataform heroku."
+        },
+        "portfolio6":{
+            "portfolio6Title": "Otto the Robot",
+            "portfolio6Desc": "Project",
+            "portfolio6Title1": "Otto the Robot",
+            "portfolio6Title2": "Project information",
+            "portfolio6Category": "Category",
+            "portfolio6CategoryValue": ": Robotic",
+            "portfolio6Client": "Client",
+            "portfolio6ClientValue": ": Myself",
+            "portfolio6ProjectDate": "Project date",
+            "portfolio6ProjectDateValue": ": 12 Maio, 2021",
+            "portfolio6ProjectUrl": "Project URL: ",
+            "portfolio6ProjectUrlValue": "https://www.ottodiy.com",
+            "portfolio6Desc1": "Based on this existing project, I decided to build it myself following the documentation. I printed the parts on my 3D printer, bought the electronics parts and program it myself in C++."
+        },
+        "portfolio7":{
+            "portfolio7Title": "FireFighter Robot",
+            "portfolio7Desc": "Project",
+            "portfolio7Title1": "FireFighter Robot",
+            "portfolio7Title2": "Project information",
+            "portfolio7Category": "Category: ",
+            "portfolio7CategoryValue": "Robotics",
+            "portfolio7Client": "Client: ",
+            "portfolio7ClientValue": "ISEP",
+            "portfolio7ProjectDate": "Project date: ",
+            "portfolio7ProjectDateValue": "29 July, 2017",
+            "portfolio7ProjectUrl": "Project URL: ",
+            "portfolio7ProjectUrlValue": "https://www.isep.ipp.pt/new/viewnew/5391?fbclid=IwAR38ziUDcppEOnyWo3XRvF7kNWz1OgXYeGWIYfNFqiScSoa9flu4ZM_PnMM",
+            "portfolio7Desc1":" This project started in the last year of graduation where we needed to built a robot that could extinguish 'fires' in this case study a candle. The robot was equipped with three proximity sensors and an ultraviolet sensor for flame detection, followed by a light that allows confirmation of the correct indication of the heat source. This project lead us to participate in the National Robotics Competition of the Polytechnic Institute of Guarda."
+        },
+        "portfolio8":{
+            "portfolio8Title": "My Furniture",
+            "portfolio8Desc": "Project",
+            "portfolio8Title1": "My Furniture",
+            "portfolio8Title2": "Project information",
+            "portfolio8Category": "Category: ",
+            "portfolio8CategoryValue": "Project Development",
+            "portfolio8Client": "Client: ",
+            "portfolio8ClientValue": "Myself",
+            "portfolio8ProjectDate": "Project date: ",
+            "portfolio8ProjectDateValue": "12 Fev, 2022",
+            "portfolio8ProjectUrl": "Project URL: ",
+            "portfolio8ProjectUrlValue": "No Link available",
+            "portfolio8Desc1": "I started designing furniture because I had the space and the tools to do it! And doing thnigs different is kinda my specialty. So I measue the space taking consideration size, storage and cable management and points of connection. Then I start to draw it in Openscad. As soon we have a final version ready we start to build it."
+        },
+        "portfolio9":{
+            "portfolio9Title": "My Furniture with leds",
+            "portfolio9Desc": "Project",
+            "portfolio9Title1": "My Furniture with leds",
+            "portfolio9Title2": "Project information",
+            "portfolio9Category": "Category: ",
+            "portfolio9CategoryValue": "Project Development",
+            "portfolio9Client": "Client: ",
+            "portfolio9ClientValue": "Myself",
+            "portfolio9ProjectDate": "Project date: ",
+            "portfolio9ProjectDateValue": "12 April, 2022",
+            "portfolio9ProjectUrl": "Project URL: ",
+            "portfolio9ProjectUrlValue": "No Link Available",
+            "portfolio9Desc1": "I decided to have led strips reacting to sound on the furniture. So I decided to by addressable led strips WS2812b 5v and a sound box with a microphone built-in and a bluetooth connector. With an App for mobile connects to the sound box through bluetooh and allows to program wich led strip individually. To power everyhting up I bought a 250W power supplier with a switch in the middle to turn on and off all leds strips."
+        },
+        "portfolio10":{
+            "portfolio10Title": "Microsoft Certificate - Planning and Administering SharePoint 2016",
+            "portfolio10Desc": "Project",
+            "portfolio10Title1": "Microsoft Certificate - Planning and Administering SharePoint 2016",
+            "portfolio10Title2": "Course information",
+            "portfolio10Category": "Category: ",
+            "portfolio10CategoryValue": "SharePoint 2016",
+            "portfolio10Client": "Client: ",
+            "portfolio10ClientValue": "Myself",
+            "portfolio10ProjectDate": "Project date: ",
+            "portfolio10ProjectDateValue": "08 October, 2020",
+            "portfolio10ProjectUrl": "Project URL: ",
+            "portfolio10ProjectUrlValue": "No Link Available",
+            "portfolio10Desc1": "The course teaches you how to deploy, administer, and troubleshoot your SharePoint environment. This course also provides guidelines, best practices, and considerations that help you optimize your SharePoint deployment."
+        }
+    },
+    "contact":{
+        "contactTitle1": "Contact",
+        "contactTitle2": "Contact Me",
+        "contactAdress1": "My Address",
+        "contactAdress2": "Porto, Portugal",
+        "contactSocial": "Social Profiles",
+        "contactEmail1": "Email Me",
+        "contactEmail2": "luismsm14@gmail.com",
+        "contactPhone1": "Call Me",
+        "contactPhone2": "+351 ask for it",
+        "form":{
+            "name": "Your Name",
+            "email": "Your Email",
+            "subject": "Subject",
+            "message": "Message",
+            "liveAlertBtn": "Send Message"
+        }
+    }
+}
