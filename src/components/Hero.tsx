@@ -101,7 +101,7 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-4xl">
         {/* Eyebrow text */}
-        <div className="flex items-center gap-4 mb-6 animate-fade-up animate-fade-up-delay-1">
+        <div className="flex items-center gap-4 mb-6">
           <div className="w-10 h-px bg-accent"></div>
           <span className="font-mono text-xs uppercase tracking-wide text-accent">
             {titles[currentTitle]}
@@ -110,19 +110,19 @@ const Hero = () => {
 
         {/* Main heading */}
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-normal leading-tight 
-                       tracking-tight mb-6 animate-fade-up animate-fade-up-delay-2">
+                       tracking-tight mb-6">
           Luís<br />
           Maia<em className="gradient-text">.</em>
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-text-dim max-w-2xl leading-relaxed mb-12 
-                      animate-fade-up animate-fade-up-delay-3">
+                     ">
           {content.about.aboutText1}
         </p>
 
         {/* Stats */}
-        <div className="flex flex-wrap gap-8 md:gap-12 mb-12 animate-fade-up animate-fade-up-delay-4">
+        <div className="flex flex-wrap gap-8 md:gap-12 mb-12">
           <div className="flex flex-col">
             <div className="font-display text-3xl md:text-4xl font-bold text-text">
               {animatedStats.processes}<span className="text-accent">+</span>
@@ -161,7 +161,7 @@ const Hero = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-4 mb-12 animate-fade-up animate-fade-up-delay-5">
+        <div className="flex flex-wrap gap-4 mb-12">
           <button
             onClick={() => scrollToSection('contact')}
             className="btn-primary"
@@ -178,7 +178,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator animate-fade-up-delay-6">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator">
         <span className="font-mono text-xs uppercase tracking-wider text-text-dim mb-2">
           Explore
         </span>

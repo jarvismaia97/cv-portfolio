@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
-import Loader from './components/Loader';
 import ScrollProgress from './components/ScrollProgress';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -13,26 +11,31 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './index.css';
 
+// Error boundary to prevent one component from crashing the whole app
+import { Component, type ReactNode, type ErrorInfo } from 'react';
+
+class ErrorBoundary extends Component<{children: ReactNode; fallback?: ReactNode}, {hasError: boolean}> {
+  state = { hasError: false };
+  static getDerivedStateFromError() { return { hasError: true }; }
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    console.error('Component error:', error, info);
+  }
+  render() {
+    if (this.state.hasError) return this.props.fallback || null;
+    return this.props.children;
+  }
+}
+
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <LanguageProvider>
-      <div className="App bg-bg min-h-screen">
-        {isLoading && <Loader />}
+      <div className="min-h-screen" style={{ background: '#060608', color: '#e8e4dc' }}>
         <ScrollProgress />
         <Navbar />
         <Hero />
-        <SkillsConstellation />
+        <ErrorBoundary>
+          <SkillsConstellation />
+        </ErrorBoundary>
         <Experience />
         <TechStack />
         <Portfolio />
