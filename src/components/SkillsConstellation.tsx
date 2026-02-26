@@ -24,10 +24,19 @@ const skills: Skill[] = [
   { name: 'Leadership', size: 1.2, angle: 0.25, color: '#00e5a0', category: 'soft' },
   { name: 'Problem Solving', size: 0.85, angle: 1.75, color: '#ff6b6b', category: 'soft' },
   { name: 'Communication', size: 0.8, angle: 2.75, color: '#dc382d', category: 'soft' },
-  { name: 'Analysis', size: 0.9, angle: 3.75, color: '#666', category: 'soft' },
+  { name: 'Analysis', size: 0.9, angle: 3.75, color: '#666666', category: 'soft' },
   { name: 'Automation', size: 0.85, angle: 4.75, color: '#42b883', category: 'soft' },
   { name: 'Innovation', size: 1.0, angle: 5.75, color: '#ffd060', category: 'soft' },
 ];
+
+// Safely append alpha hex to a color (handles 3-digit hex)
+function colorWithAlpha(hex: string, alpha: string): string {
+  // Expand 3-digit hex to 6-digit
+  if (hex.length === 4) {
+    hex = '#' + hex[1] + hex[1] + hex[2] + hex[2] + hex[3] + hex[3];
+  }
+  return hex + alpha;
+}
 
 function easeInOutCubic(t: number) {
   return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
@@ -106,7 +115,7 @@ function renderCanvas(
 
     // Node glow
     const nodeGlow = ctx.createRadialGradient(x, y, 0, x, y, r * 3);
-    nodeGlow.addColorStop(0, skill.color + '25');
+    nodeGlow.addColorStop(0, colorWithAlpha(skill.color, '25'));
     nodeGlow.addColorStop(1, 'transparent');
     ctx.fillStyle = nodeGlow;
     ctx.beginPath();
