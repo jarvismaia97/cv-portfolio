@@ -74,7 +74,7 @@ const About: React.FC = () => {
               <div className="relative max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-2xl blur-xl opacity-20" />
                 <img
-                  src="/images/me.png"
+                  src="https://placehold.co/400x400/1a1a2e/00d2ff?text=LM"
                   alt="Luís Maia"
                   className="relative z-10 w-full rounded-2xl shadow-2xl"
                 />

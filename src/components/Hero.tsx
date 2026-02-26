@@ -73,15 +73,15 @@ const Hero: React.FC = () => {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         {/* Main content */}
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 100 }}
+          animate={{ y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
           className="space-y-8"
         >
           {/* Greeting */}
           <motion.p
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ x: -50 }}
+            animate={{ x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl text-gray-300"
           >
@@ -90,8 +90,8 @@ const Hero: React.FC = () => {
 
           {/* Name */}
           <motion.h1
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ scale: 0.5 }}
+            animate={{ scale: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold"
           >
@@ -102,8 +102,8 @@ const Hero: React.FC = () => {
           <div className="h-16 flex items-center justify-center">
             <motion.h2
               key={currentTitle}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
               className="text-2xl md:text-3xl lg:text-4xl text-gray-300 font-light"
@@ -114,8 +114,8 @@ const Hero: React.FC = () => {
 
           {/* Description */}
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{}}
+            animate={{}}
             transition={{ duration: 1, delay: 1 }}
             className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed"
           >
@@ -124,8 +124,8 @@ const Hero: React.FC = () => {
 
           {/* Social Links */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 50 }}
+            animate={{ y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
             className="flex justify-center space-x-6 pt-8"
           >
@@ -137,8 +137,8 @@ const Hero: React.FC = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.9 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ y: 20 }}
+                animate={{ y: 0 }}
                 transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
                 className="p-4 bg-dark-secondary hover:bg-dark-tertiary rounded-full border border-gray-700 hover:border-primary text-gray-400 hover:text-primary transition-all duration-300"
                 aria-label={social.label}
@@ -150,8 +150,8 @@ const Hero: React.FC = () => {
 
           {/* Scroll Down Button */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{}}
+            animate={{}}
             transition={{ duration: 1, delay: 1.8 }}
             className="pt-16"
           >
