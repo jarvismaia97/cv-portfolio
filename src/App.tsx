@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import Loader from './components/Loader';
+import SplineBackground from './components/SplineBackground';
 import ScrollProgress from './components/ScrollProgress';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -39,11 +40,14 @@ function App() {
   return (
     <LanguageProvider>
       {loading && <Loader onComplete={handleLoaderComplete} />}
+      {!loading && <SplineBackground />}
       <div 
         className="min-h-screen" 
         style={{ 
-          background: '#060608', 
+          background: 'transparent', 
           color: '#e8e4dc',
+          position: 'relative',
+          zIndex: 1,
           // Prevent scroll during loader
           overflow: loading ? 'hidden' : undefined,
           height: loading ? '100vh' : undefined,
