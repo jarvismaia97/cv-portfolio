@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/cv-portfolio/', // GitHub Pages base path
+  base: '/', // Use '/' for Vercel, '/cv-portfolio/' for GitHub Pages
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
