@@ -202,8 +202,10 @@ const SkillsConstellation = () => {
       // Use only the first 100vh of scroll within the section for the animation
       // so the expansion happens while the constellation is still fully visible
       const scrollIntoSection = -rect.top;
-      const animationRange = window.innerHeight; // animate over 1 viewport height
-      const progress = Math.max(0, Math.min(1, scrollIntoSection / animationRange));
+      // Animate over the scrollable portion of the section (total height - viewport)
+      const scrollable = section.offsetHeight - window.innerHeight;
+      if (scrollable <= 0) return;
+      const progress = Math.max(0, Math.min(1, scrollIntoSection / scrollable));
       progressRef.current = progress;
       if (progressTextRef.current) {
         progressTextRef.current.textContent = String(Math.round(progress * 100));
@@ -242,7 +244,7 @@ const SkillsConstellation = () => {
     <section
       id="skills"
       ref={sectionRef}
-      style={{ height: '200vh', position: 'relative' }}
+      style={{ height: '120vh', position: 'relative' }}
     >
       <div
         ref={stickyRef}
