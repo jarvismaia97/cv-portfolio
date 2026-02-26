@@ -32,6 +32,8 @@ function App() {
 
   const handleLoaderComplete = useCallback(() => {
     setLoading(false);
+    // Trigger resize so canvas components recalculate dimensions
+    requestAnimationFrame(() => window.dispatchEvent(new Event('resize')));
   }, []);
 
   return (

@@ -156,10 +156,19 @@ const SkillsConstellation = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    let lastW = 0, lastH = 0;
     const resize = () => {
       const dpr = window.devicePixelRatio || 1;
       const w = sticky.clientWidth;
       const h = sticky.clientHeight;
+      if (w === 0 || h === 0) return; // not visible yet
+      if (w === lastW && h === lastH) {
+        // Size didn't change, just re-render
+        renderCanvas(canvas, ctx, progressRef.current);
+        return;
+      }
+      lastW = w;
+      lastH = h;
       canvas.width = w * dpr;
       canvas.height = h * dpr;
       canvas.style.width = w + 'px';
