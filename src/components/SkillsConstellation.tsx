@@ -74,15 +74,16 @@ function renderCanvas(
   ctx.fillStyle = glow;
   ctx.fillRect(0, 0, w, h);
 
-  // Map progress: start spread at 0.3 so constellation is visible initially
-  const spread = 0.3 + easeInOutCubic(progress) * 0.7;
+  // Spread: start at 0.6 (already visible) → 1.0 fully expanded
+  const ease = easeInOutCubic(progress);
+  const spread = 0.6 + ease * 0.4;
 
   // Compute positions — always spread out from center
   const positions = skills.map((skill) => {
-    const d = spread * maxDist * (0.4 + skill.size * 0.6);
-    // Slow orbit animation
-    const orbit = time * 0.00005 * (skill.category === 'soft' ? -1 : 1);
-    const angle = skill.angle + orbit + progress * 0.2;
+    const d = spread * maxDist * (0.5 + skill.size * 0.5);
+    // Slow orbit animation + scroll rotation
+    const orbit = time * 0.00004 * (skill.category === 'soft' ? -1 : 1);
+    const angle = skill.angle + orbit + ease * Math.PI * 0.4;
     return {
       x: cx + Math.cos(angle) * d,
       y: cy + Math.sin(angle) * d,
@@ -92,7 +93,7 @@ function renderCanvas(
   // Connection lines — from center and between neighbors
   ctx.strokeStyle = 'rgba(0, 229, 160, 0.3)';
   ctx.lineWidth = 0.5;
-  ctx.globalAlpha = 0.08 + spread * 0.12;
+  ctx.globalAlpha = 0.12 + ease * 0.1;
   positions.forEach((pos, i) => {
     ctx.beginPath();
     ctx.moveTo(cx, cy);
@@ -126,17 +127,17 @@ function renderCanvas(
     ctx.beginPath();
     ctx.arc(x, y, r, 0, Math.PI * 2);
     ctx.fillStyle = skill.color;
-    ctx.globalAlpha = 0.2 + spread * 0.8;
+    ctx.globalAlpha = 0.7 + ease * 0.3;
     ctx.fill();
 
     // Circle stroke
-    ctx.globalAlpha = 0.4 + spread * 0.6;
+    ctx.globalAlpha = 0.8 + ease * 0.2;
     ctx.strokeStyle = skill.color;
     ctx.lineWidth = 1.5;
     ctx.stroke();
 
     // Label — always visible
-    ctx.globalAlpha = 0.3 + spread * 0.7;
+    ctx.globalAlpha = 0.6 + ease * 0.4;
     ctx.fillStyle = '#e8e4dc';
     ctx.font = `${Math.round(9 + skill.size * 3)}px 'IBM Plex Mono', monospace`;
     ctx.textAlign = 'center';
@@ -145,7 +146,7 @@ function renderCanvas(
   });
 
   // Central text — fades as constellation expands
-  const centerAlpha = Math.max(0, 1 - spread * 1.2);
+  const centerAlpha = Math.max(0, 1 - ease * 1.5);
   if (centerAlpha > 0.01) {
     ctx.globalAlpha = centerAlpha;
     ctx.fillStyle = '#6b6872';
@@ -239,7 +240,7 @@ const SkillsConstellation = () => {
     <section
       id="skills"
       ref={sectionRef}
-      style={{ height: '300vh', position: 'relative' }}
+      style={{ height: '200vh', position: 'relative' }}
     >
       <div
         ref={stickyRef}
