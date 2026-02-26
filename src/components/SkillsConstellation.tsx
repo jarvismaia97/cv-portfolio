@@ -199,9 +199,11 @@ const SkillsConstellation = () => {
 
     const onScroll = () => {
       const rect = section.getBoundingClientRect();
-      const scrollable = section.offsetHeight - window.innerHeight;
-      if (scrollable <= 0) return;
-      const progress = Math.max(0, Math.min(1, -rect.top / scrollable));
+      // Use only the first 100vh of scroll within the section for the animation
+      // so the expansion happens while the constellation is still fully visible
+      const scrollIntoSection = -rect.top;
+      const animationRange = window.innerHeight; // animate over 1 viewport height
+      const progress = Math.max(0, Math.min(1, scrollIntoSection / animationRange));
       progressRef.current = progress;
       if (progressTextRef.current) {
         progressTextRef.current.textContent = String(Math.round(progress * 100));
