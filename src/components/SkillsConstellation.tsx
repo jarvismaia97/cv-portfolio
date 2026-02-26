@@ -5,33 +5,39 @@ interface Skill {
   size: number;
   angle: number;
   color: string;
+  category: 'tech' | 'soft';
 }
 
 const skills: Skill[] = [
-  { name: 'TypeScript', size: 1.3, angle: 0, color: '#3178c6' },
-  { name: 'Angular', size: 1.2, angle: 0.5, color: '#dd0031' },
-  { name: 'Node.js', size: 1.15, angle: 1.0, color: '#68a063' },
-  { name: 'React', size: 1.25, angle: 1.5, color: '#61dafb' },
-  { name: 'SQL', size: 1.0, angle: 2.0, color: '#336791' },
-  { name: 'Docker', size: 1.1, angle: 2.5, color: '#2496ed' },
-  { name: 'PHP', size: 0.9, angle: 3.0, color: '#777bb4' },
-  { name: 'JavaScript', size: 1.05, angle: 3.5, color: '#f7df1e' },
-  { name: 'CSS/HTML', size: 1.0, angle: 4.0, color: '#e44d26' },
-  { name: 'Git', size: 0.95, angle: 4.5, color: '#f05032' },
-  { name: 'SharePoint', size: 0.85, angle: 5.0, color: '#0078d4' },
-  { name: 'Azure', size: 0.8, angle: 5.5, color: '#0078d4' },
-  { name: 'Leadership', size: 1.2, angle: 0.25, color: '#00e5a0' },
-  { name: 'Problem Solving', size: 0.85, angle: 1.75, color: '#ff6b6b' },
-  { name: 'Communication', size: 0.8, angle: 2.75, color: '#dc382d' },
-  { name: 'Analysis', size: 0.9, angle: 3.75, color: '#666' },
-  { name: 'Automation', size: 0.85, angle: 4.75, color: '#42b883' },
-  { name: 'Innovation', size: 1.0, angle: 5.75, color: '#ffd060' },
+  { name: 'TypeScript', size: 1.3, angle: 0, color: '#3178c6', category: 'tech' },
+  { name: 'Angular', size: 1.2, angle: 0.5, color: '#dd0031', category: 'tech' },
+  { name: 'Node.js', size: 1.15, angle: 1.0, color: '#68a063', category: 'tech' },
+  { name: 'React', size: 1.25, angle: 1.5, color: '#61dafb', category: 'tech' },
+  { name: 'SQL', size: 1.0, angle: 2.0, color: '#336791', category: 'tech' },
+  { name: 'Docker', size: 1.1, angle: 2.5, color: '#2496ed', category: 'tech' },
+  { name: 'PHP', size: 0.9, angle: 3.0, color: '#777bb4', category: 'tech' },
+  { name: 'JavaScript', size: 1.05, angle: 3.5, color: '#f7df1e', category: 'tech' },
+  { name: 'CSS/HTML', size: 1.0, angle: 4.0, color: '#e44d26', category: 'tech' },
+  { name: 'Git', size: 0.95, angle: 4.5, color: '#f05032', category: 'tech' },
+  { name: 'SharePoint', size: 0.85, angle: 5.0, color: '#0078d4', category: 'tech' },
+  { name: 'Azure', size: 0.8, angle: 5.5, color: '#0078d4', category: 'tech' },
+  { name: 'Leadership', size: 1.2, angle: 0.25, color: '#00e5a0', category: 'soft' },
+  { name: 'Problem Solving', size: 0.85, angle: 1.75, color: '#ff6b6b', category: 'soft' },
+  { name: 'Communication', size: 0.8, angle: 2.75, color: '#dc382d', category: 'soft' },
+  { name: 'Analysis', size: 0.9, angle: 3.75, color: '#666', category: 'soft' },
+  { name: 'Automation', size: 0.85, angle: 4.75, color: '#42b883', category: 'soft' },
+  { name: 'Innovation', size: 1.0, angle: 5.75, color: '#ffd060', category: 'soft' },
 ];
+
+function easeInOutCubic(t: number) {
+  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+}
 
 function renderCanvas(
   canvas: HTMLCanvasElement,
   ctx: CanvasRenderingContext2D,
-  progress: number
+  progress: number,
+  time: number
 ) {
   const dpr = window.devicePixelRatio || 1;
   const w = canvas.width / dpr;
@@ -40,101 +46,109 @@ function renderCanvas(
 
   const cx = w / 2;
   const cy = h / 2;
-  const maxDist = Math.min(w, h) * 0.35;
+  const maxDist = Math.min(w, h) * 0.38;
 
   ctx.save();
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-  // Background
+  // Clear
   ctx.fillStyle = '#060608';
   ctx.fillRect(0, 0, w, h);
 
-  // Central glow
-  const glowSize = 100 + progress * 200;
+  // Central glow — always visible, pulses gently
+  const pulse = Math.sin(time * 0.001) * 0.01;
+  const glowSize = 120 + progress * 180;
   const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, glowSize);
-  glow.addColorStop(0, `rgba(0, 229, 160, ${0.06 - progress * 0.03})`);
+  glow.addColorStop(0, `rgba(0, 229, 160, ${0.08 + pulse})`);
+  glow.addColorStop(0.5, `rgba(0, 229, 160, ${0.02 + pulse})`);
   glow.addColorStop(1, 'transparent');
   ctx.fillStyle = glow;
   ctx.fillRect(0, 0, w, h);
 
-  // Ease
-  const ease = progress < 0.5
-    ? 2 * progress * progress
-    : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+  // Map progress: start spread at 0.3 so constellation is visible initially
+  const spread = 0.3 + easeInOutCubic(progress) * 0.7;
 
-  // Compute positions
+  // Compute positions — always spread out from center
   const positions = skills.map((skill) => {
-    const d = ease * maxDist * (0.5 + skill.size * 0.5);
-    const angle = skill.angle + ease * 0.3;
+    const d = spread * maxDist * (0.4 + skill.size * 0.6);
+    // Slow orbit animation
+    const orbit = time * 0.00005 * (skill.category === 'soft' ? -1 : 1);
+    const angle = skill.angle + orbit + progress * 0.2;
     return {
       x: cx + Math.cos(angle) * d,
       y: cy + Math.sin(angle) * d,
     };
   });
 
-  // Connection lines
-  ctx.globalAlpha = 0.06 + ease * 0.08;
-  ctx.strokeStyle = 'rgba(0, 229, 160, 0.5)';
+  // Connection lines — from center and between neighbors
+  ctx.strokeStyle = 'rgba(0, 229, 160, 0.3)';
   ctx.lineWidth = 0.5;
+  ctx.globalAlpha = 0.08 + spread * 0.12;
   positions.forEach((pos, i) => {
     ctx.beginPath();
     ctx.moveTo(cx, cy);
     ctx.lineTo(pos.x, pos.y);
     ctx.stroke();
-    if (i > 0) {
-      ctx.beginPath();
-      ctx.moveTo(positions[i - 1].x, positions[i - 1].y);
-      ctx.lineTo(pos.x, pos.y);
-      ctx.stroke();
-    }
+
+    // Connect to next neighbor (circular)
+    const next = positions[(i + 1) % positions.length];
+    ctx.beginPath();
+    ctx.moveTo(pos.x, pos.y);
+    ctx.lineTo(next.x, next.y);
+    ctx.stroke();
   });
 
   // Nodes
   ctx.globalAlpha = 1;
   skills.forEach((skill, i) => {
     const { x, y } = positions[i];
-    const r = 4 + skill.size * 16;
+    const r = 3 + skill.size * 14;
 
-    // Glow
+    // Node glow
     const nodeGlow = ctx.createRadialGradient(x, y, 0, x, y, r * 3);
-    nodeGlow.addColorStop(0, skill.color + '30');
+    nodeGlow.addColorStop(0, skill.color + '25');
     nodeGlow.addColorStop(1, 'transparent');
     ctx.fillStyle = nodeGlow;
     ctx.beginPath();
     ctx.arc(x, y, r * 3, 0, Math.PI * 2);
     ctx.fill();
 
-    // Circle
+    // Circle fill
     ctx.beginPath();
     ctx.arc(x, y, r, 0, Math.PI * 2);
     ctx.fillStyle = skill.color;
-    ctx.globalAlpha = 0.15 + ease * 0.85;
+    ctx.globalAlpha = 0.2 + spread * 0.8;
     ctx.fill();
-    ctx.globalAlpha = 1;
+
+    // Circle stroke
+    ctx.globalAlpha = 0.4 + spread * 0.6;
     ctx.strokeStyle = skill.color;
     ctx.lineWidth = 1.5;
     ctx.stroke();
 
-    // Label
-    if (ease > 0.2) {
-      ctx.globalAlpha = Math.min(1, (ease - 0.2) * 2);
-      ctx.fillStyle = '#e8e4dc';
-      ctx.font = `${Math.round(10 + skill.size * 3)}px monospace`;
-      ctx.textAlign = 'center';
-      ctx.fillText(skill.name, x, y + r + 18);
-      ctx.globalAlpha = 1;
-    }
+    // Label — always visible
+    ctx.globalAlpha = 0.3 + spread * 0.7;
+    ctx.fillStyle = '#e8e4dc';
+    ctx.font = `${Math.round(9 + skill.size * 3)}px 'IBM Plex Mono', monospace`;
+    ctx.textAlign = 'center';
+    ctx.fillText(skill.name, x, y + r + 16);
+    ctx.globalAlpha = 1;
   });
 
-  // Central label
-  ctx.globalAlpha = 1 - ease * 0.7;
-  ctx.fillStyle = '#e8e4dc';
-  ctx.font = '14px monospace';
-  ctx.textAlign = 'center';
-  ctx.fillText('CORE SKILLS', cx, cy - 10);
-  ctx.font = 'italic 28px serif';
-  ctx.fillText('Luís Maia', cx, cy + 25);
-  ctx.globalAlpha = 1;
+  // Central text — fades as constellation expands
+  const centerAlpha = Math.max(0, 1 - spread * 1.2);
+  if (centerAlpha > 0.01) {
+    ctx.globalAlpha = centerAlpha;
+    ctx.fillStyle = '#6b6872';
+    ctx.font = "11px 'IBM Plex Mono', monospace";
+    ctx.textAlign = 'center';
+    ctx.letterSpacing = '0.2em';
+    ctx.fillText('CORE SKILLS', cx, cy - 8);
+    ctx.fillStyle = '#e8e4dc';
+    ctx.font = "italic 24px 'Playfair Display', serif";
+    ctx.fillText('Luís Maia', cx, cy + 22);
+    ctx.globalAlpha = 1;
+  }
 
   ctx.restore();
 }
@@ -146,6 +160,7 @@ const SkillsConstellation = () => {
   const progressRef = useRef(0);
   const progressTextRef = useRef<HTMLSpanElement>(null);
   const rafRef = useRef(0);
+  const animRef = useRef(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -161,19 +176,15 @@ const SkillsConstellation = () => {
       const dpr = window.devicePixelRatio || 1;
       const w = sticky.clientWidth;
       const h = sticky.clientHeight;
-      if (w === 0 || h === 0) return; // not visible yet
-      if (w === lastW && h === lastH) {
-        // Size didn't change, just re-render
-        renderCanvas(canvas, ctx, progressRef.current);
-        return;
+      if (w === 0 || h === 0) return;
+      if (w !== lastW || h !== lastH) {
+        lastW = w;
+        lastH = h;
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
+        canvas.style.width = w + 'px';
+        canvas.style.height = h + 'px';
       }
-      lastW = w;
-      lastH = h;
-      canvas.width = w * dpr;
-      canvas.height = h * dpr;
-      canvas.style.width = w + 'px';
-      canvas.style.height = h + 'px';
-      renderCanvas(canvas, ctx, progressRef.current);
     };
 
     const onScroll = () => {
@@ -181,18 +192,23 @@ const SkillsConstellation = () => {
       const scrollable = section.offsetHeight - window.innerHeight;
       if (scrollable <= 0) return;
       const progress = Math.max(0, Math.min(1, -rect.top / scrollable));
-
-      if (Math.abs(progress - progressRef.current) > 0.002) {
-        progressRef.current = progress;
-        renderCanvas(canvas, ctx, progress);
-        if (progressTextRef.current) {
-          progressTextRef.current.textContent = String(Math.round(progress * 100));
-        }
+      progressRef.current = progress;
+      if (progressTextRef.current) {
+        progressTextRef.current.textContent = String(Math.round(progress * 100));
       }
     };
 
-    resize();
+    // Animation loop — always running for gentle orbit effect
+    let running = true;
+    const animate = (time: number) => {
+      if (!running) return;
+      resize();
+      renderCanvas(canvas, ctx, progressRef.current, time);
+      animRef.current = requestAnimationFrame(animate);
+    };
+
     onScroll();
+    animRef.current = requestAnimationFrame(animate);
 
     window.addEventListener('resize', resize);
     const scrollHandler = () => {
@@ -202,9 +218,11 @@ const SkillsConstellation = () => {
     window.addEventListener('scroll', scrollHandler, { passive: true });
 
     return () => {
+      running = false;
       window.removeEventListener('resize', resize);
       window.removeEventListener('scroll', scrollHandler);
       cancelAnimationFrame(rafRef.current);
+      cancelAnimationFrame(animRef.current);
     };
   }, []);
 
@@ -212,7 +230,7 @@ const SkillsConstellation = () => {
     <section
       id="skills"
       ref={sectionRef}
-      style={{ height: '350vh', position: 'relative' }}
+      style={{ height: '300vh', position: 'relative' }}
     >
       <div
         ref={stickyRef}
@@ -235,7 +253,7 @@ const SkillsConstellation = () => {
           </h2>
         </div>
 
-        <div style={{ position: 'absolute', bottom: '2rem', right: '1.5rem', fontFamily: 'monospace', fontSize: '0.8rem', color: '#6b6872' }}>
+        <div style={{ position: 'absolute', bottom: '2rem', right: '1.5rem', fontFamily: "'IBM Plex Mono', monospace", fontSize: '0.75rem', color: '#6b6872' }}>
           Scroll <span ref={progressTextRef} style={{ color: '#00e5a0', fontSize: '1rem' }}>0</span>%
         </div>
       </div>
