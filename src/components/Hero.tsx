@@ -1,175 +1,188 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
-const Hero: React.FC = () => {
+const Hero = () => {
   const { content } = useLanguage();
-  const [currentTitle, setCurrentTitle] = useState(0);
-  
+  const [animatedStats, setAnimatedStats] = useState({
+    processes: 0,
+    projects: 0,
+    hoursSupport: 0,
+    hoursCoding: 0
+  });
+
+  // Target stats from Luís's achievements
+  const targetStats = {
+    processes: 132,
+    projects: 28,
+    hoursSupport: 8980,
+    hoursCoding: 3920
+  };
+
   const titles = [
-    'Developer',
-    'Tech Lead',
-    'Builder',
-    'Designer',
-    'Freelancer'
+    "Tech Lead",
+    "Full-Stack Developer", 
+    "Builder",
+    "Problem Solver"
   ];
+
+  const [currentTitle, setCurrentTitle] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTitle((prev) => (prev + 1) % titles.length);
+    // Animate numbers on load
+    const timer = setTimeout(() => {
+      animateCounters();
+    }, 1500);
+
+    // Cycle through titles
+    const titleInterval = setInterval(() => {
+      setCurrentTitle(prev => (prev + 1) % titles.length);
     }, 3000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearTimeout(timer);
+      clearInterval(titleInterval);
+    };
   }, []);
 
-  const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com/lmaia-22', label: 'GitHub' },
-    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/luis-luis-maia-maia', label: 'LinkedIn' },
-    { icon: FaTwitter, href: 'https://twitter.com/MaiaLuismsm14', label: 'Twitter' },
-    { icon: FaFacebook, href: 'https://www.facebook.com/profile.php?id=100001977161534', label: 'Facebook' },
-    { icon: FaInstagram, href: 'https://www.instagram.com/luisluismaiamaia/', label: 'Instagram' },
-  ];
+  const animateCounters = () => {
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const increment = duration / steps;
 
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      const progress = step / steps;
+      
+      setAnimatedStats({
+        processes: Math.round(targetStats.processes * progress),
+        projects: Math.round(targetStats.projects * progress),
+        hoursSupport: Math.round(targetStats.hoursSupport * progress),
+        hoursCoding: Math.round(targetStats.hoursCoding * progress),
+      });
+
+      if (step >= steps) {
+        clearInterval(timer);
+        setAnimatedStats(targetStats); // Ensure exact final values
+      }
+    }, increment);
+  };
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark-secondary to-dark">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='0.02'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }} />
-        
-        {/* Floating particles */}
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-primary/30 rounded-full"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -100, 0],
-              scale: [1, 1.5, 1],
-              opacity: [0.3, 0.8, 0.3],
-            }}
-            transition={{
-              duration: 8 + i * 2,
-              repeat: Infinity,
-              delay: i * 0.8,
-            }}
-            style={{
-              left: `${15 + i * 15}%`,
-              top: `${20 + i * 10}%`,
-            }}
-          />
-        ))}
+    <section id="hero" className="relative min-h-screen flex items-center px-6 md:px-12 pt-24 pb-16 overflow-hidden">
+      {/* Background grid */}
+      <div 
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px',
+          maskImage: 'radial-gradient(ellipse at 30% 50%, black 20%, transparent 70%)'
+        }}
+      />
+      
+      {/* Hero glow */}
+      <div 
+        className="absolute w-96 md:w-[600px] h-96 md:h-[600px] rounded-full pointer-events-none 
+                   top-[10%] left-[-10%] opacity-40"
+        style={{
+          background: 'radial-gradient(circle, rgba(0,229,160,0.08) 0%, transparent 70%)'
+        }}
+      />
+
+      <div className="relative z-10 max-w-4xl">
+        {/* Eyebrow text */}
+        <div className="flex items-center gap-4 mb-6 animate-fade-up animate-fade-up-delay-1">
+          <div className="w-10 h-px bg-accent"></div>
+          <span className="font-mono text-xs uppercase tracking-wide text-accent">
+            {titles[currentTitle]}
+          </span>
+        </div>
+
+        {/* Main heading */}
+        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-normal leading-tight 
+                       tracking-tight mb-6 animate-fade-up animate-fade-up-delay-2">
+          Luís<br />
+          Maia<em className="gradient-text">.</em>
+        </h1>
+
+        {/* Subtitle */}
+        <p className="text-lg md:text-xl text-text-dim max-w-2xl leading-relaxed mb-12 
+                      animate-fade-up animate-fade-up-delay-3">
+          {content.about.aboutText1}
+        </p>
+
+        {/* Stats */}
+        <div className="flex flex-wrap gap-8 md:gap-12 mb-12 animate-fade-up animate-fade-up-delay-4">
+          <div className="flex flex-col">
+            <div className="font-display text-3xl md:text-4xl font-bold text-text">
+              {animatedStats.processes}<span className="text-accent">+</span>
+            </div>
+            <div className="font-mono text-xs uppercase tracking-wide text-text-dim mt-1">
+              {content.about.counts.countProcess}
+            </div>
+          </div>
+          
+          <div className="flex flex-col">
+            <div className="font-display text-3xl md:text-4xl font-bold text-text">
+              {animatedStats.projects}<span className="text-accent">+</span>
+            </div>
+            <div className="font-mono text-xs uppercase tracking-wide text-text-dim mt-1">
+              {content.about.counts.countProjects}
+            </div>
+          </div>
+          
+          <div className="flex flex-col">
+            <div className="font-display text-3xl md:text-4xl font-bold text-text">
+              {animatedStats.hoursSupport.toLocaleString()}<span className="text-accent">h</span>
+            </div>
+            <div className="font-mono text-xs uppercase tracking-wide text-text-dim mt-1">
+              {content.about.counts.countHoursSupport}
+            </div>
+          </div>
+          
+          <div className="flex flex-col">
+            <div className="font-display text-3xl md:text-4xl font-bold text-text">
+              {animatedStats.hoursCoding.toLocaleString()}<span className="text-accent">h</span>
+            </div>
+            <div className="font-mono text-xs uppercase tracking-wide text-text-dim mt-1">
+              {content.about.counts.countHoursCoding}
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-wrap gap-4 mb-12 animate-fade-up animate-fade-up-delay-5">
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="btn-primary"
+          >
+            Get in touch
+          </button>
+          <button
+            onClick={() => scrollToSection('experience')}
+            className="btn-ghost"
+          >
+            View experience
+          </button>
+        </div>
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        {/* Main content */}
-        <motion.div
-          initial={{ y: 100 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="space-y-8"
-        >
-          {/* Greeting */}
-          <motion.p
-            initial={{ x: -50 }}
-            animate={{ x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-300"
-          >
-            {content.intro} <span className="gradient-text font-semibold">{content.intro1}</span> {content.intro0}
-          </motion.p>
-
-          {/* Name */}
-          <motion.h1
-            initial={{ scale: 0.5 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold"
-          >
-            <span className="gradient-text">Luís Maia</span>
-          </motion.h1>
-
-          {/* Animated titles */}
-          <div className="h-16 flex items-center justify-center">
-            <motion.h2
-              key={currentTitle}
-              initial={{ y: 20 }}
-              animate={{ y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="text-2xl md:text-3xl lg:text-4xl text-gray-300 font-light"
-            >
-              {titles[currentTitle]}
-            </motion.h2>
-          </div>
-
-          {/* Description */}
-          <motion.p
-            initial={{}}
-            animate={{}}
-            transition={{ duration: 1, delay: 1 }}
-            className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed"
-          >
-            {content.intro3}
-          </motion.p>
-
-          {/* Social Links */}
-          <motion.div
-            initial={{ y: 50 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="flex justify-center space-x-6 pt-8"
-          >
-            {socialLinks.map((social, index) => (
-              <motion.a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
-                initial={{ y: 20 }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
-                className="p-4 bg-dark-secondary hover:bg-dark-tertiary rounded-full border border-gray-700 hover:border-primary text-gray-400 hover:text-primary transition-all duration-300"
-                aria-label={social.label}
-              >
-                <social.icon className="w-6 h-6" />
-              </motion.a>
-            ))}
-          </motion.div>
-
-          {/* Scroll Down Button */}
-          <motion.div
-            initial={{}}
-            animate={{}}
-            transition={{ duration: 1, delay: 1.8 }}
-            className="pt-16"
-          >
-            <motion.button
-              onClick={scrollToAbout}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              animate={{ y: [0, 10, 0] }}
-              transition={{ y: { duration: 2, repeat: Infinity } }}
-              className="group flex flex-col items-center space-y-2 text-gray-400 hover:text-primary transition-colors"
-            >
-              <span className="text-sm font-medium">Scroll Down</span>
-              <div className="w-6 h-10 border-2 border-current rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-current rounded-full mt-2 group-hover:animate-bounce" />
-              </div>
-            </motion.button>
-          </motion.div>
-        </motion.div>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator animate-fade-up-delay-6">
+        <span className="font-mono text-xs uppercase tracking-wider text-text-dim mb-2">
+          Explore
+        </span>
+        <div className="scroll-dot"></div>
       </div>
     </section>
   );

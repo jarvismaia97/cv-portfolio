@@ -2,152 +2,433 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base styles */
-html {
-  scroll-behavior: smooth;
+/* Reset and base styles */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+html { 
+  scroll-behavior: auto; 
+  overflow-x: hidden; 
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: #060608;
+  color: #e8e4dc;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0D1117;
-  color: #ffffff;
   overflow-x: hidden;
+}
+
+/* Film grain overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #161B22;
+  background: #060608;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3A7BD5;
-  border-radius: 4px;
+  background: #00e5a0;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00D2FF;
+  background: #00e5a0;
+  opacity: 0.8;
 }
 
-/* Smooth transitions */
-* {
-  transition: all 0.3s ease;
+/* Typography */
+.font-display {
+  font-family: 'Playfair Display', serif;
 }
 
-/* Section spacing */
-.section {
-  padding: 100px 0;
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
 }
 
-/* Gradient backgrounds */
-.gradient-bg {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, #00D2FF, #3A7BD5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Animation utilities */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-}
-
-.animate-on-scroll.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Portfolio filter buttons */
-.filter-btn {
-  @apply px-6 py-2 bg-transparent border border-gray-600 text-gray-400 rounded-full transition-all duration-300 hover:border-primary hover:text-primary;
-}
-
-.filter-btn.active {
-  @apply bg-gradient-to-r from-primary to-secondary text-white border-transparent;
-}
-
-/* Portfolio items */
-.portfolio-item {
-  @apply relative overflow-hidden rounded-lg cursor-pointer;
-  background: #161B22;
-}
-
-.portfolio-item::before {
-  content: '';
-  position: absolute;
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 210, 255, 0.9), rgba(58, 123, 213, 0.9));
+  height: 2px;
+  background: linear-gradient(90deg, #00e5a0, #5090ff);
+  z-index: 100;
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+/* Navigation styles */
+.nav-scrolled {
+  background: rgba(6,6,8,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Section tags */
+.section-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #00e5a0;
+}
+
+/* Hero animations */
+.animate-fade-up {
   opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
 }
 
-.portfolio-item:hover::before {
-  opacity: 1;
+.animate-fade-up-delay-1 {
+  animation-delay: 0.3s;
 }
 
-.portfolio-item .content {
-  @apply relative z-10;
+.animate-fade-up-delay-2 {
+  animation-delay: 0.5s;
 }
 
-/* Service cards */
-.service-card {
-  @apply bg-dark-secondary border border-gray-700 rounded-lg p-8 transition-all duration-300 hover:border-primary hover:shadow-xl;
+.animate-fade-up-delay-3 {
+  animation-delay: 0.8s;
 }
 
-.service-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
+.animate-fade-up-delay-4 {
+  animation-delay: 1s;
 }
 
-/* Contact form */
-.form-input {
-  @apply w-full px-4 py-3 bg-dark-secondary border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary;
+.animate-fade-up-delay-5 {
+  animation-delay: 1.2s;
 }
 
-/* Skills progress bars */
-.skill-bar {
-  @apply h-2 bg-gray-700 rounded-full overflow-hidden;
+.animate-fade-up-delay-6 {
+  animation-delay: 1.5s;
 }
 
-.skill-progress {
-  @apply h-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000 ease-out;
+@keyframes fadeUp {
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
 
-/* Timeline */
-.timeline-item::before {
+/* Button styles */
+.btn-primary {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  background: #00e5a0;
+  color: #060608;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,229,160,0.2);
+}
+
+.btn-ghost {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  background: transparent;
+  color: #e8e4dc;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-ghost:hover {
+  border-color: #00e5a0;
+  color: #00e5a0;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 0.5rem;
+  opacity: 0; 
+  animation: fadeUp 0.8s ease 1.5s forwards;
+}
+
+.scroll-dot {
+  width: 1px; 
+  height: 35px;
+  background: linear-gradient(to bottom, #00e5a0, transparent);
+  animation: scrollPulse 2s ease infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scaleY(0.5); 
+    transform-origin: top; 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scaleY(1); 
+  }
+}
+
+/* Timeline styles */
+.timeline::before {
   content: '';
-  position: absolute;
-  left: -8px;
-  top: 24px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #00D2FF, #3A7BD5);
-  z-index: 2;
-}
-
-.timeline-line {
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #3A7BD5;
+  background: linear-gradient(to bottom, #00e5a0, rgba(255,255,255,0.06), transparent);
+}
+
+.timeline-item {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 0.5rem;
+  width: 9px; 
+  height: 9px;
+  border-radius: 50%;
+  background: #00e5a0;
+  box-shadow: 0 0 12px rgba(0,229,160,0.4);
+}
+
+/* Stack grid */
+.stack-cell {
+  background: #0c0c10;
+  transition: background 0.4s ease, opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stack-cell.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stack-cell:hover {
+  background: rgba(0,229,160,0.03);
+}
+
+.stack-bar-track {
+  width: 60px; 
+  height: 2px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.stack-bar-fill {
+  height: 100%;
+  background: #00e5a0;
+  border-radius: 1px;
+  width: 0%;
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Project cards */
+.project-card {
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 6px;
+  background: #060608;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.4s ease, transform 0.4s ease, opacity 0.7s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card:hover {
+  border-color: #00e5a0;
+  transform: translateY(-4px) !important;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00e5a0, #5090ff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Contact links */
+.contact-link {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 4px;
+  text-decoration: none;
+  color: #e8e4dc;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.contact-link:hover {
+  border-color: #00e5a0;
+  transform: translateX(4px);
+}
+
+.contact-link .link-arrow {
+  color: #00e5a0;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-link:hover .link-arrow {
+  transform: translateX(4px);
+}
+
+/* Reveal animation utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Loader styles */
+.loader {
+  position: fixed; 
+  inset: 0; 
+  background: #060608;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.loader.hidden { 
+  opacity: 0; 
+  visibility: hidden; 
+}
+
+.loader-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.loader-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #00e5a0;
+  margin-bottom: 2rem;
+}
+
+.loader-bar {
+  width: 180px; 
+  height: 1px; 
+  background: rgba(255,255,255,0.1);
+  position: relative; 
+  overflow: hidden;
+}
+
+.loader-bar-fill {
+  height: 100%; 
+  width: 0%; 
+  background: #00e5a0;
+  transition: width 0.15s ease;
+}
+
+/* Utility classes */
+.glass-effect {
+  background: rgba(6,6,8,0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00e5a0, #5090ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 1rem;
+  }
+  
+  .timeline-item {
+    padding-left: 2.5rem;
+  }
+  
+  .timeline-item::before {
+    left: calc(1rem - 4px);
+  }
 }

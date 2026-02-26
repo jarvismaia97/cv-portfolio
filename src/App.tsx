@@ -1,24 +1,42 @@
+import { useEffect, useState } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
+import Loader from './components/Loader';
+import ScrollProgress from './components/ScrollProgress';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
-import Resume from './components/Resume';
-import Services from './components/Services';
+import SkillsConstellation from './components/SkillsConstellation';
+import Experience from './components/Experience';
+import TechStack from './components/TechStack';
 import Portfolio from './components/Portfolio';
+import Philosophy from './components/Philosophy';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './index.css';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <LanguageProvider>
-      <div className="App">
+      <div className="App bg-bg min-h-screen">
+        {isLoading && <Loader />}
+        <ScrollProgress />
         <Navbar />
         <Hero />
-        <About />
-        <Resume />
-        <Services />
+        <SkillsConstellation />
+        <Experience />
+        <TechStack />
         <Portfolio />
+        <Philosophy />
         <Contact />
         <Footer />
       </div>
