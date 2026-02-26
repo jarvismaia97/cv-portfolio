@@ -1,32 +1,37 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
-const Loader = () => {
+const Loader = ({ onComplete }: { onComplete: () => void }) => {
   const [progress, setProgress] = useState(0);
+  const [hiding, setHiding] = useState(false);
+  const completed = useRef(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress(prev => {
-        const increment = Math.random() * 15 + 5;
-        const newProgress = Math.min(prev + increment, 100);
-        
-        if (newProgress >= 100) {
+        const increment = Math.random() * 12 + 5;
+        const next = Math.min(prev + increment, 100);
+        if (next >= 100 && !completed.current) {
+          completed.current = true;
           clearInterval(interval);
+          // Start fade-out after bar fills
+          setTimeout(() => setHiding(true), 200);
+          // Remove loader after fade completes
+          setTimeout(() => onComplete(), 900);
         }
-        
-        return newProgress;
+        return next;
       });
-    }, 80);
+    }, 70);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [onComplete]);
 
   return (
-    <div className="loader">
+    <div className={`loader ${hiding ? 'hidden' : ''}`}>
       <div className="loader-name">Luís Maia</div>
       <div className="loader-title">Loading experience</div>
       <div className="loader-bar">
-        <div 
-          className="loader-bar-fill" 
+        <div
+          className="loader-bar-fill"
           style={{ width: `${progress}%` }}
         />
       </div>

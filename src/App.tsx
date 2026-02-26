@@ -1,4 +1,6 @@
+import { useState, useCallback } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
+import Loader from './components/Loader';
 import ScrollProgress from './components/ScrollProgress';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -11,7 +13,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './index.css';
 
-// Error boundary to prevent one component from crashing the whole app
 import { Component, type ReactNode, type ErrorInfo } from 'react';
 
 class ErrorBoundary extends Component<{children: ReactNode; fallback?: ReactNode}, {hasError: boolean}> {
@@ -27,9 +28,25 @@ class ErrorBoundary extends Component<{children: ReactNode; fallback?: ReactNode
 }
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  const handleLoaderComplete = useCallback(() => {
+    setLoading(false);
+  }, []);
+
   return (
     <LanguageProvider>
-      <div className="min-h-screen" style={{ background: '#060608', color: '#e8e4dc' }}>
+      {loading && <Loader onComplete={handleLoaderComplete} />}
+      <div 
+        className="min-h-screen" 
+        style={{ 
+          background: '#060608', 
+          color: '#e8e4dc',
+          // Prevent scroll during loader
+          overflow: loading ? 'hidden' : undefined,
+          height: loading ? '100vh' : undefined,
+        }}
+      >
         <ScrollProgress />
         <Navbar />
         <Hero />
