@@ -45,6 +45,20 @@ const Experience = () => {
       company: content.resume.resumeProfItem2.resumeProfItem2Local,
       description: content.resume.resumeProfItem2.resumeProfItem2Desc.resumeProfItem2Desc1,
       tags: ['Visual Basic', 'Web Forms', 'XML', 'Digital Signage']
+    },
+    {
+      date: content.resume.resumeProfItem4.resumeProfItem4Date,
+      role: content.resume.resumeProfItem4.resumeProfItem4Title,
+      company: content.resume.resumeProfItem4.resumeProfItem4Local,
+      description: content.resume.resumeProfItem4.resumeProfItem4Desc.resumeProfItem4Desc1,
+      tags: ['Visual Basic', 'Web Forms', 'XML', 'Digital Signage']
+    },
+    {
+      date: content.resume.resumeProfItem5.resumeProfItem5Date,
+      role: content.resume.resumeProfItem5.resumeProfItem5Title,
+      company: content.resume.resumeProfItem5.resumeProfItem5Local,
+      description: content.resume.resumeProfItem5.resumeProfItem5Desc.resumeProfItem5Desc1,
+      tags: ['Visual Basic', 'Web Forms', 'XML', 'Digital Signage']
     }
   ];
 

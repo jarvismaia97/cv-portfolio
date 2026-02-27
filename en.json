@@ -116,12 +116,32 @@
         },
         "resumeProfItem3":{
             "resumeProfItem3Title": "Front-End Developer",
-            "resumeProfItem3Date": "March 2023 - Present",
+            "resumeProfItem3Date": "March 2023 - Maio 2023",
             "resumeProfItem3Local": "MediaProbe, Porto, Portugal",
             "resumeProfItem3Desc": {
                 "resumeProfItem3Desc1": "Working on multiple projects with Angular",
                 "resumeProfItem3Desc2": "Building some new endpoints in typescript",
                 "resumeProfItem3Desc3": "Improve application navagability"
+            }
+        },
+        "resumeProfItem4":{
+            "resumeProfItem4Title": "FullStack Developer",
+            "resumeProfItem4Date": "Maio 2023 - Setembro 2025",
+            "resumeProfItem4Local": "MediaProbe, Porto, Portugal",
+            "resumeProfItem4Desc": {
+                "resumeProfItem4Desc1": "Desenvolver vários projetos em Angular",
+                "resumeProfItem4Desc2": "Construir novos endpoints para serem consumidos pelo frontend",
+                "resumeProfItem4Desc3": "Melhoramento da navegabilidade das aplicações"
+            }
+        },
+        "resumeProfItem5":{
+            "resumeProfItem5Title": "Tech Lead Developer",
+            "resumeProfItem5Date": "Setembro 2025 - Present",
+            "resumeProfItem5Local": "MediaProbe, Porto, Portugal",
+            "resumeProfItem5Desc": {
+                "resumeProfItem5Desc1": "Desenvolver vários projetos em Angular",
+                "resumeProfItem5Desc2": "Construir novos endpoints para serem consumidos pelo frontend",
+                "resumeProfItem5Desc3": "Melhoramento da navegabilidade das aplicações"
             }
         }
     },

@@ -21,13 +21,13 @@
         "birthday": "Data de Nascimento:",
         "birthdayValue": "22 Abril 1997",
         "website": "Site:",
-        "websiteValue": "www.lmaia-22.github.io/CV",
+        "websiteValue": "https://cv-portfolio-taupe.vercel.app/",
         "phone": "Telemóvel:",
         "phoneValue": "+351 pede-me",
         "city": "Cidade:",
         "cityValue": "Porto, Portugal",
         "age": "Idade:",
-        "ageValue": "25",
+        "ageValue": "28",
         "degree": "Grau de estudo:",
         "degreeValue": "Licenciatura",
         "email1": "Email:",
@@ -93,7 +93,7 @@
         "resumeTitle3": "Carreira Profissional",
         "resumeProfItem1":{
             "resumeProfItem1Title": "Técnico de Sistemas de Informação",
-            "resumeProfItem1Date": "2019 - Atualmente",
+            "resumeProfItem1Date": "2019 - 2023",
             "resumeProfItem1Local": "Fundação Casa da Música, Porto, Portugal",
             "resumeProfItem1Desc": {
                 "resumeProfItem1Desc1": "Helpdesk a mais de 200 utilizadores",
@@ -116,12 +116,32 @@
         },
         "resumeProfItem3":{
             "resumeProfItem3Title": "Front-End Developer",
-            "resumeProfItem3Date": "Março 2023 - Present",
+            "resumeProfItem3Date": "Março 2023 - Maio 2023",
             "resumeProfItem3Local": "MediaProbe, Porto, Portugal",
             "resumeProfItem3Desc": {
                 "resumeProfItem3Desc1": "Desenvolver vários projetos em Angular",
                 "resumeProfItem3Desc2": "Construir novos endpoints para serem consumidos pelo frontend",
                 "resumeProfItem3Desc3": "Melhoramento da navegabilidade das aplicações"
+            }
+        },
+        "resumeProfItem4":{
+            "resumeProfItem4Title": "FullStack Developer",
+            "resumeProfItem4Date": "Maio 2023 - Setembro 2025",
+            "resumeProfItem4Local": "MediaProbe, Porto, Portugal",
+            "resumeProfItem4Desc": {
+                "resumeProfItem4Desc1": "Desenvolver vários projetos em Angular",
+                "resumeProfItem4Desc2": "Construir novos endpoints para serem consumidos pelo frontend",
+                "resumeProfItem4Desc3": "Melhoramento da navegabilidade das aplicações"
+            }
+        },
+        "resumeProfItem5":{
+            "resumeProfItem5Title": "Tech Lead Developer",
+            "resumeProfItem5Date": "Setembro 2025 - Present",
+            "resumeProfItem5Local": "MediaProbe, Porto, Portugal",
+            "resumeProfItem5Desc": {
+                "resumeProfItem5Desc1": "Desenvolver vários projetos em Angular",
+                "resumeProfItem5Desc2": "Construir novos endpoints para serem consumidos pelo frontend",
+                "resumeProfItem5Desc3": "Melhoramento da navegabilidade das aplicações"
             }
         }
     },
