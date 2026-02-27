@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useRef } from 'react';
 
 const Spline = lazy(() => import('@splinetool/react-spline'));
 
@@ -7,16 +7,22 @@ interface Props {
 }
 
 const SplineBackground = ({ onLoad }: Props) => {
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const innerRef = useRef<HTMLDivElement>(null);
   const rafRef = useRef(0);
 
   useEffect(() => {
     const onScroll = () => {
       cancelAnimationFrame(rafRef.current);
       rafRef.current = requestAnimationFrame(() => {
+        const el = innerRef.current;
+        if (!el) return;
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
         if (maxScroll <= 0) return;
-        setScrollProgress(window.scrollY / maxScroll);
+        const progress = window.scrollY / maxScroll;
+        const scale = 1 + progress * 1.5;
+        const opacity = 1 - progress * 0.3;
+        el.style.transform = `scale(${scale})`;
+        el.style.opacity = String(opacity);
       });
     };
 
@@ -26,9 +32,6 @@ const SplineBackground = ({ onLoad }: Props) => {
       cancelAnimationFrame(rafRef.current);
     };
   }, []);
-
-  const scale = 1 + scrollProgress * 1.5;
-  const opacity = 1 - scrollProgress * 0.3;
 
   return (
     <div
@@ -41,13 +44,12 @@ const SplineBackground = ({ onLoad }: Props) => {
       }}
     >
       <div
+        ref={innerRef}
         style={{
           width: '100%',
           height: '100%',
-          transform: `scale(${scale})`,
-          opacity,
           transformOrigin: 'center center',
-          willChange: 'transform',
+          willChange: 'transform, opacity',
         }}
       >
         <Suspense fallback={null}>
