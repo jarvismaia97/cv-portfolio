@@ -177,6 +177,26 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Profile photo */}
+      <div className="hidden lg:flex relative z-10 items-center justify-center">
+        <div className="relative">
+          {/* Glow behind photo */}
+          <div 
+            className="absolute -inset-4 rounded-full opacity-30 blur-2xl"
+            style={{ background: 'radial-gradient(circle, rgba(0,229,160,0.3) 0%, transparent 70%)' }}
+          />
+          <img
+            src="/images/me.jpg"
+            alt="Luís Maia"
+            className="relative w-72 h-72 xl:w-80 xl:h-80 object-cover object-top rounded-full"
+            style={{
+              border: '2px solid rgba(0,229,160,0.2)',
+              boxShadow: '0 0 60px rgba(0,229,160,0.1)',
+            }}
+          />
+        </div>
+      </div>
+
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator">
         <span className="font-mono text-xs uppercase tracking-wider text-text-dim mb-2">
