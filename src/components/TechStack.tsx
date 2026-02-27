@@ -18,7 +18,7 @@ const TechStack = () => {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.05 }
     );
 
     const cells = document.querySelectorAll('.stack-cell');

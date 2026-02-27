@@ -10,7 +10,7 @@ const Philosophy = () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.05 }
     );
 
     const elements = document.querySelectorAll('.philosophy-quote, .quote-attribution');

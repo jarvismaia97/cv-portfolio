@@ -13,7 +13,7 @@ const Portfolio = () => {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.05 }
     );
 
     const cards = document.querySelectorAll('.project-card');
