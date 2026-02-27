@@ -76,7 +76,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center px-6 md:px-12 pt-24 pb-16 overflow-hidden justify-between">
+    <section id="hero" className="relative min-h-screen flex flex-col-reverse lg:flex-row items-center px-6 md:px-12 pt-24 pb-16 overflow-hidden lg:justify-between gap-8 lg:gap-12">
       {/* Background grid */}
       <div 
         className="absolute inset-0 opacity-20"
@@ -177,10 +177,9 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Profile photo */}
-      <div className="hidden lg:flex relative z-10 items-center justify-center">
+      {/* Profile photo — desktop: right side, mobile: above content */}
+      <div className="relative z-10 flex items-center justify-center lg:justify-end">
         <div className="relative">
-          {/* Glow behind photo */}
           <div 
             className="absolute -inset-4 rounded-full opacity-30 blur-2xl"
             style={{ background: 'radial-gradient(circle, rgba(0,229,160,0.3) 0%, transparent 70%)' }}
@@ -188,7 +187,7 @@ const Hero = () => {
           <img
             src="/images/me.jpg"
             alt="Luís Maia"
-            className="relative w-72 h-72 xl:w-80 xl:h-80 object-cover object-top rounded-full"
+            className="relative w-40 h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-cover object-top rounded-full"
             style={{
               border: '2px solid rgba(0,229,160,0.2)',
               boxShadow: '0 0 60px rgba(0,229,160,0.1)',
