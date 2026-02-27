@@ -199,10 +199,9 @@ const SkillsConstellation = () => {
 
     const onScroll = () => {
       const rect = section.getBoundingClientRect();
-      const scrollIntoSection = -rect.top;
-      const scrollable = section.offsetHeight - window.innerHeight;
-      if (scrollable <= 0) return;
-      const progress = Math.max(0, Math.min(1, scrollIntoSection / scrollable));
+      // Start when section enters viewport (top at screen bottom), complete when top hits screen top
+      const vh = window.innerHeight;
+      const progress = Math.max(0, Math.min(1, 1 - rect.top / vh));
       progressRef.current = progress;
       if (progressTextRef.current) {
         progressTextRef.current.textContent = String(Math.round(progress * 100));
