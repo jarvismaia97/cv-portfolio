@@ -4,6 +4,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 import { LanguageProvider } from './context/LanguageContext';
 import Loader from './components/Loader';
 import SplineBackground from './components/SplineBackground';
+import Fireflies from './components/Fireflies';
 import ScrollProgress from './components/ScrollProgress';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -37,6 +38,7 @@ function App() {
       <CustomCursor />
       {/* Spline loads behind the loader */}
       <SplineBackground onLoad={handleSplineLoad} />
+      <Fireflies />
       {loading && <Loader onComplete={handleLoaderComplete} splineReady={splineReady} />}
 
       {/* Konami code easter egg */}
