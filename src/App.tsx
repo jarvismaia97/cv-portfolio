@@ -16,23 +16,28 @@ import './index.css';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [splineReady, setSplineReady] = useState(false);
 
   const handleLoaderComplete = useCallback(() => {
     setLoading(false);
     requestAnimationFrame(() => window.dispatchEvent(new Event('resize')));
   }, []);
 
+  const handleSplineLoad = useCallback(() => {
+    setSplineReady(true);
+  }, []);
+
   return (
     <LanguageProvider>
-      {loading && <Loader onComplete={handleLoaderComplete} />}
-      {!loading && <SplineBackground />}
+      {/* Spline loads behind the loader */}
+      <SplineBackground onLoad={handleSplineLoad} />
+      {loading && <Loader onComplete={handleLoaderComplete} splineReady={splineReady} />}
       <div 
         className="min-h-screen" 
         style={{ 
           background: 'transparent', 
           position: 'relative',
           zIndex: 1,
-          // Prevent scroll during loader
           overflow: loading ? 'hidden' : undefined,
           height: loading ? '100vh' : undefined,
         }}

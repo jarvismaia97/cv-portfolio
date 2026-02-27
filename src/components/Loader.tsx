@@ -1,29 +1,45 @@
 import { useEffect, useState, useRef } from 'react';
 
-const Loader = ({ onComplete }: { onComplete: () => void }) => {
+interface Props {
+  onComplete: () => void;
+  splineReady: boolean;
+}
+
+const Loader = ({ onComplete, splineReady }: Props) => {
   const [progress, setProgress] = useState(0);
   const [hiding, setHiding] = useState(false);
   const completed = useRef(false);
 
   useEffect(() => {
+    // Fake progress up to 90% quickly, then wait for spline
     const interval = setInterval(() => {
       setProgress(prev => {
-        const increment = Math.random() * 12 + 5;
-        const next = Math.min(prev + increment, 100);
-        if (next >= 100 && !completed.current) {
-          completed.current = true;
-          clearInterval(interval);
-          // Start fade-out after bar fills
-          setTimeout(() => setHiding(true), 200);
-          // Remove loader after fade completes
-          setTimeout(() => onComplete(), 900);
+        if (prev >= 90 && !splineReady) {
+          // Hold at ~90% until spline loads
+          return Math.min(prev + 0.3, 95);
         }
-        return next;
+        const increment = Math.random() * 10 + 3;
+        return Math.min(prev + increment, splineReady ? 100 : 90);
       });
-    }, 70);
+    }, 80);
 
     return () => clearInterval(interval);
-  }, [onComplete]);
+  }, [splineReady]);
+
+  useEffect(() => {
+    // When spline is ready, rush to 100%
+    if (splineReady && progress < 100) {
+      setProgress(100);
+    }
+  }, [splineReady, progress]);
+
+  useEffect(() => {
+    if (progress >= 100 && !completed.current) {
+      completed.current = true;
+      setTimeout(() => setHiding(true), 200);
+      setTimeout(() => onComplete(), 900);
+    }
+  }, [progress, onComplete]);
 
   return (
     <div className={`loader ${hiding ? 'hidden' : ''}`}>
