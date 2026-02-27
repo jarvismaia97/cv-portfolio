@@ -50,7 +50,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-bg-elevated border-t border-border">
+    <section id="contact" className="py-24 border-t border-border section-bg">
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}

@@ -10,7 +10,7 @@
 }
 
 html { 
-  scroll-behavior: auto; 
+  scroll-behavior: smooth; 
   overflow-x: hidden; 
 }
 
@@ -243,7 +243,7 @@ body::after {
 
 /* Stack grid */
 .stack-cell {
-  background: #0c0c10;
+  background: rgba(12,12,16,0.6);
   transition: background 0.4s ease, opacity 0.6s ease, transform 0.6s ease;
   opacity: 0;
   transform: translateY(20px);
@@ -416,6 +416,56 @@ body::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Section backgrounds for visibility over Spline */
+.section-bg {
+  background: rgba(6,6,8,0.88);
+  backdrop-filter: blur(8px);
+}
+
+/* Hide default cursor on desktop (custom cursor replaces it) */
+@media (hover: hover) and (pointer: fine) {
+  * { cursor: none !important; }
+}
+
+/* Micro-interactions */
+.nav-logo {
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+.nav-logo:hover {
+  transform: scale(1.08);
+  text-shadow: 0 0 20px rgba(0,229,160,0.4);
+}
+
+.btn-primary, .btn-ghost, .project-card, .contact-link {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 40px rgba(0,229,160,0.08);
+}
+
+.contact-link:hover {
+  box-shadow: 0 4px 20px rgba(0,229,160,0.06);
+}
+
+/* Matrix rain effect for easter egg */
+.matrix-rain {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,229,160,0.03) 2px,
+    rgba(0,229,160,0.03) 4px
+  );
+  animation: matrixScroll 0.5s linear infinite;
+}
+
+@keyframes matrixScroll {
+  to { background-position: 0 20px; }
 }
 
 /* Mobile responsiveness */

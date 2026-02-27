@@ -85,7 +85,7 @@ const TechStack = () => {
   ];
 
   return (
-    <section id="stack" className="py-32 bg-bg-elevated border-t border-b border-border overflow-hidden">
+    <section id="stack" className="py-32 border-t border-b border-border overflow-hidden section-bg">
       {/* Section header */}
       <div className="text-center mb-20 px-6 md:px-12">
         <div className="section-tag mb-4 reveal">Technical Proficiency</div>

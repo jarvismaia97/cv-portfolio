@@ -93,7 +93,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="projects" className="py-32 px-6 md:px-12">
+    <section id="projects" className="py-32 px-6 md:px-12 section-bg">
       {/* Section header */}
       <div className="text-center mb-20">
         <div className="section-tag mb-4 reveal">Selected Work</div>

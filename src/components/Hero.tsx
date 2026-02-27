@@ -76,7 +76,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center px-6 md:px-12 pt-24 pb-16 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center px-6 md:px-12 pt-24 pb-16 overflow-hidden justify-between">
       {/* Background grid */}
       <div 
         className="absolute inset-0 opacity-20"

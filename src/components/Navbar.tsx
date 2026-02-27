@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { useLogoClicks } from '../hooks/useEasterEggs';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { language, setLanguage } = useLanguage();
+  const { matrixMode, handleClick: handleLogoClick } = useLogoClicks();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +19,9 @@ const Navbar = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const navHeight = 80;
+      const top = element.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   };
 
@@ -28,12 +32,19 @@ const Navbar = () => {
       ${isScrolled ? 'nav-scrolled' : ''}
     `}>
       <div 
-        className="font-display text-xl cursor-pointer"
-        onClick={() => scrollToSection('hero')}
+        className="font-display text-xl cursor-pointer nav-logo"
+        onClick={() => { handleLogoClick(); scrollToSection('hero'); }}
       >
         L<span className="text-accent">.</span>
         M<span className="text-accent">.</span>
       </div>
+
+      {matrixMode && (
+        <div className="fixed inset-0 pointer-events-none z-[99989]"
+          style={{ background: 'rgba(0,229,160,0.03)', mixBlendMode: 'screen' }}>
+          <div className="matrix-rain" />
+        </div>
+      )}
       
       <ul className="hidden md:flex gap-8 list-none">
         {[

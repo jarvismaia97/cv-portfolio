@@ -20,7 +20,7 @@ const Philosophy = () => {
   }, []);
 
   return (
-    <section className="py-40 px-6 md:px-12 text-center relative overflow-hidden">
+    <section className="py-40 px-6 md:px-12 text-center relative overflow-hidden section-bg">
       <div className="max-w-4xl mx-auto">
         <div className="philosophy-quote font-display text-3xl md:text-4xl lg:text-5xl 
                         font-normal italic leading-relaxed tracking-tight 

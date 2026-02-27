@@ -63,7 +63,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-32 px-6 md:px-12 relative">
+    <section id="experience" className="py-32 px-6 md:px-12 relative section-bg">
       {/* Section header */}
       <div className="text-center mb-20 reveal">
         <div className="section-tag mb-4">Career Path</div>
