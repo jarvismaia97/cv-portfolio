@@ -112,7 +112,7 @@ const Hero = () => {
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-normal leading-tight 
                        tracking-tight mb-6">
           Luís<br />
-          Maia<em className="gradient-text">.</em>
+          Maia
         </h1>
 
         {/* Subtitle */}
