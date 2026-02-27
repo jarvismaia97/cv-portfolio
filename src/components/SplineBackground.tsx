@@ -1,6 +1,4 @@
-import { lazy, Suspense, useEffect, useRef } from 'react';
-
-const Spline = lazy(() => import('@splinetool/react-spline'));
+import { useEffect, useRef } from 'react';
 
 interface Props {
   onLoad?: () => void;
@@ -27,11 +25,12 @@ const SplineBackground = ({ onLoad }: Props) => {
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
+    onLoad?.();
     return () => {
       window.removeEventListener('scroll', onScroll);
       cancelAnimationFrame(rafRef.current);
     };
-  }, []);
+  }, [onLoad]);
 
   return (
     <div
@@ -52,13 +51,15 @@ const SplineBackground = ({ onLoad }: Props) => {
           willChange: 'transform, opacity',
         }}
       >
-        <Suspense fallback={null}>
-          <Spline
-            scene="https://prod.spline.design/oDXvwqdleYbMiG8I/scene.splinecode"
-            style={{ width: '100%', height: '100%' }}
-            onLoad={() => onLoad?.()}
-          />
-        </Suspense>
+        <img
+          src="/bg-forest.jpg"
+          alt=""
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
       </div>
     </div>
   );
