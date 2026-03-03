@@ -109,14 +109,14 @@ const Hero = () => {
         </div>
 
         {/* Main heading */}
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-normal leading-tight 
+        <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-normal leading-tight 
                        tracking-tight mb-6">
           Luís<br />
           Maia
         </h1>
 
         {/* Subtitle */}
-        <p className="text-lg md:text-xl text-text-dim max-w-2xl leading-relaxed mb-12 
+        <p className="text-base md:text-lg text-text-dim max-w-xl leading-relaxed mb-12 
                      ">
           {content.about.aboutText1}
         </p>

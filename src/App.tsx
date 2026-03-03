@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SkillsConstellation from './components/SkillsConstellation';
 import Experience from './components/Experience';
+import BeyondCode from './components/BeyondCode';
 import TechStack from './components/TechStack';
 import Portfolio from './components/Portfolio';
 import Philosophy from './components/Philosophy';
@@ -67,6 +68,7 @@ function App() {
         <Hero />
         <SkillsConstellation />
         <Experience />
+        <BeyondCode />
         <TechStack />
         <Portfolio />
         <Philosophy />
