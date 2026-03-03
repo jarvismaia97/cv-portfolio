@@ -1,9 +1,89 @@
 import { useEffect } from 'react';
-import { useLanguage } from '../context/LanguageContext';
+
+interface Project {
+  type: string;
+  name: string;
+  description: string;
+  url: string;
+  metrics: { label: string; value: string }[];
+}
+
+const projects: Project[] = [
+  {
+    type: 'Word Game',
+    name: 'Treta',
+    description:
+      'A Portuguese Wordle clone built with Expo (React Native + Web). Multiple modes: 4/5/6/7 letters, daily challenge with streak tracking, share results with emoji grid. Live at jogartreta.pt.',
+    url: 'https://github.com/jarvismaia97/letreco',
+    metrics: [
+      { label: 'Tech', value: 'Expo' },
+      { label: 'Platform', value: 'Web + Mobile' },
+      { label: 'Status', value: 'Live' },
+    ],
+  },
+  {
+    type: 'Community Platform',
+    name: 'Mustang Clube do Norte',
+    description:
+      'Official website for the Mustangs Club of Northern Portugal. Built from scratch as co-founder and board member. Event management, member showcase, and club identity.',
+    url: 'https://github.com/lmaia-22/mustangclubedonorte',
+    metrics: [
+      { label: 'Tech', value: 'TypeScript' },
+      { label: 'Deploy', value: 'Vercel' },
+      { label: 'Status', value: 'Live' },
+    ],
+  },
+  {
+    type: 'SaaS Product',
+    name: 'Prima Prime',
+    description:
+      'My next big personal project — a full-stack SaaS application with a modern API architecture. Currently in active development, designing for scale from day one.',
+    url: 'https://github.com/lmaia-22/primaprime',
+    metrics: [
+      { label: 'Stage', value: 'Building' },
+      { label: 'Scope', value: 'Full-Stack' },
+      { label: 'Vision', value: 'SaaS' },
+    ],
+  },
+  {
+    type: 'AI Assistant',
+    name: 'Jarvis',
+    description:
+      'A personal AI assistant powered by OpenClaw with specialized sub-agents (designer, backend, frontend, crypto, QA, devops, research). Features skill-based architecture, ChromaDB long-term memory, and multi-agent orchestration.',
+    url: '#',
+    metrics: [
+      { label: 'Agents', value: '11' },
+      { label: 'Memory', value: 'ChromaDB' },
+      { label: 'Status', value: 'Active' },
+    ],
+  },
+  {
+    type: 'Education',
+    name: 'Blog Boa Nova — Teaching Day',
+    description:
+      'Gave a full-day programming class to 12th-grade students at Escola Boa Nova in Leça. Students built a blog from scratch, learning HTML, CSS, JavaScript, and deployment fundamentals.',
+    url: '#',
+    metrics: [
+      { label: 'Duration', value: 'Full Day' },
+      { label: 'Students', value: '12º Ano' },
+      { label: 'Impact', value: 'Mentoring' },
+    ],
+  },
+  {
+    type: 'Collaboration Tool',
+    name: 'Hotaru',
+    description:
+      'A shared clipboard platform with auth (Magic Link, GitHub, Google), paste expiration, public/private visibility controls, rate limiting, and real-time user search.',
+    url: 'https://github.com/lmaia-22/hotaru',
+    metrics: [
+      { label: 'Tech', value: 'Next.js' },
+      { label: 'Auth', value: 'Supabase' },
+      { label: 'Cache', value: 'Redis' },
+    ],
+  },
+];
 
 const Portfolio = () => {
-  const { content } = useLanguage();
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -22,76 +102,6 @@ const Portfolio = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Luís's key projects from JSON data
-  const projects = [
-    {
-      type: 'Full-Stack Development',
-      name: content.portfolio.portfolio1.portfolio1Title,
-      description: content.portfolio.portfolio1.portfolio1Desc1,
-      url: content.portfolio.portfolio1.portfolio1ProjectUrlValue,
-      metrics: [
-        { label: 'Impact', value: 'High' },
-        { label: 'Tech', value: 'React' },
-        { label: 'Year', value: '2021' }
-      ]
-    },
-    {
-      type: 'Website Development',
-      name: content.portfolio.portfolio3.portfolio3Title,
-      description: content.portfolio.portfolio3.portfolio3Desc1,
-      url: content.portfolio.portfolio3.portfolio3ProjectUrlValue,
-      metrics: [
-        { label: 'Views', value: '2K+' },
-        { label: 'Tech', value: 'HTML/CSS' },
-        { label: 'Status', value: 'Live' }
-      ]
-    },
-    {
-      type: 'Tool Development',
-      name: content.portfolio.portfolio4.portfolio4Title,
-      description: content.portfolio.portfolio4.portfolio4Desc1,
-      url: content.portfolio.portfolio4.portfolio4ProjectUrlValue,
-      metrics: [
-        { label: 'AI', value: 'Powered' },
-        { label: 'Stage', value: 'Beta' },
-        { label: 'Users', value: 'Global' }
-      ]
-    },
-    {
-      type: 'Backend Service',
-      name: content.portfolio.portfolio5.portfolio5Title,
-      description: content.portfolio.portfolio5.portfolio5Desc1,
-      url: content.portfolio.portfolio5.portfolio5ProjectUrlValue,
-      metrics: [
-        { label: 'Tech', value: 'Node.js' },
-        { label: 'Deploy', value: 'Heroku' },
-        { label: 'Status', value: 'Active' }
-      ]
-    },
-    {
-      type: 'Robotics',
-      name: content.portfolio.portfolio7.portfolio7Title,
-      description: content.portfolio.portfolio7.portfolio7Desc1,
-      url: content.portfolio.portfolio7.portfolio7ProjectUrlValue,
-      metrics: [
-        { label: 'Award', value: 'Winner' },
-        { label: 'Tech', value: 'Arduino' },
-        { label: 'Event', value: 'National' }
-      ]
-    },
-    {
-      type: 'Hardware Project',
-      name: content.portfolio.portfolio8.portfolio8Title,
-      description: content.portfolio.portfolio8.portfolio8Desc1,
-      url: '#',
-      metrics: [
-        { label: 'Design', value: 'OpenSCAD' },
-        { label: 'Build', value: 'Custom' },
-        { label: 'Type', value: 'Furniture' }
-      ]
-    }
-  ];
-
   return (
     <section id="projects" className="py-32 px-6 md:px-12 section-bg">
       {/* Section header */}
@@ -108,20 +118,22 @@ const Portfolio = () => {
           <div
             key={index}
             className="project-card p-8 md:p-10 cursor-pointer group"
-            onClick={() => project.url !== '#' && window.open(project.url, '_blank')}
+            onClick={() =>
+              project.url !== '#' && window.open(project.url, '_blank')
+            }
           >
             <div className="font-mono text-xs uppercase tracking-wider text-accent mb-4">
               {project.type}
             </div>
-            
+
             <div className="font-display text-xl md:text-2xl font-normal tracking-tight mb-3">
               {project.name}
             </div>
-            
+
             <div className="text-sm md:text-base text-text-dim leading-relaxed mb-6 line-clamp-3">
               {project.description}
             </div>
-            
+
             <div className="flex gap-6">
               {project.metrics.map((metric, metricIndex) => (
                 <div key={metricIndex} className="flex flex-col">
@@ -136,8 +148,7 @@ const Portfolio = () => {
             </div>
 
             {project.url !== '#' && (
-              <div className="mt-6 font-mono text-xs uppercase tracking-wide text-accent 
-                            opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="mt-6 font-mono text-xs uppercase tracking-wide text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 View Project →
               </div>
             )}
