@@ -1,9 +1,9 @@
 { 
     "intro": "I'm a passionate",
     "intro0": "from Portugal",
-    "intro1":"full stacker",
+    "intro1":"Tech Lead",
     "intro2": "I'm a",
-    "intro3": "Developer, Student, Designer, Freelancer, Ninja on free times",
+    "intro3": "Tech Lead, Developer, Student, Designer, Freelancer, Ninja on free times",
     "nav":{
         "navLanguage":"PT/EN",
         "navLanguageBtn": "setLanguage('pt')",
@@ -17,7 +17,7 @@
     "about":{
         "aboutTitle1": "About",
         "aboutTitle2": "Learn more about me",
-        "aboutText1": "I'm Luis Maia from Portugal, currently working as a Front-End Developer at MediaProbe. I specialize in crafting straightforward, yet highly efficient coding solutions with a keen emphasis on user requirements. I have a knack for bridging the gap between frontend and backend developers through my guidance and motivation. On a personal level, I'm a proficient communicator and advisor, with a passion for cars and paddle tennis. Feel free to peruse my portfolio and don't hesitate to reach out.",
+        "aboutText1": "I’m Luis Maia, a Lead-focused FullStack Developer at Mediaprobe. My mission is to craft straightforward yet robust solutions that never lose sight of the end-user. I’ve found my niche in bridging the gap between Frontend and Backend silos—guiding teams through technical transitions and motivating developers to see the 'big picture' of the platform. I pride myself on being a clear communicator and a trusted technical advisor. When I’m off the clock, you’ll find me on the padel court or exploring the world. Reach out if you want to talk shop or collaborate on our next big integration.",
         "birthday": "Birthday:",
         "birthdayValue": "22 April 1997",
         "website": "Website:",
@@ -34,7 +34,7 @@
         "email1Value":"luismsm14@gmail.com",
         "freelance": "Freelance:",
         "freelanceValue": "Available",
-        "aboutText2": "A little more about me, I love automation since I found out I was bit lazy. But being lazy has it's perks, it force us to find ways to make life easier for ourselves as well as others, David Dunham says that \"Efficiency is intelligent laziness\" and I couldn't agree more. So I began my studies in Higher Institute of Engineering in Porto (ISEP) in 2015 taking the course of Systems Engineering for three years. In 2018 I began my internship in Fundação Casa da Música as a Information Systems Technician where I worked with a great variety of tools, wich allowed my to learn new skills and most important, on how to comunicate with our clients (work colleagues). For that reason, I began to have interest in Searching/Designing and building solutions, in this case web applications that would make the work 'easier' through analysis of processes and finding points of improvement, sometimes the smallest change can cause the biggest impact.",
+        "aboutText2": "I’ve always had a passion for automation—a trait born from what some might call 'laziness,' but what I prefer to call strategic efficiency. As David Dunham famously said, 'Efficiency is intelligent laziness,' and I couldn’t agree more. This mindset drives me to find the shortest, most robust path to a solution for both my team and our users.",
         "counts":{
             "countProcess": "Processes Improved",
             "countProjects": "Projects",
@@ -96,12 +96,7 @@
             "resumeProfItem1Date": "2019 - March 2023",
             "resumeProfItem1Local": "Fundação Casa da Música, Porto, Portugal",
             "resumeProfItem1Desc": {
-                "resumeProfItem1Desc1": "Helpdesk service to more then 200 people",
-                "resumeProfItem1Desc2": "Design, development, and implementation of solutions",
-                "resumeProfItem1Desc3": "Internal dashboards built with HTML, JavaScript, CSS and PHP (MVC), for providing information from different areas",
-                "resumeProfItem1Desc4": "Delegate tasks to the outsource companies that provide applications as a service.",
-                "resumeProfItem1Desc5": "Help the various departments find points of improvement and find new solutions that helps them achieve their goals",
-                "resumeProfItem1Desc6": "IT Support and User Account Manager"
+                "resumeProfItem1Desc1": "Helpdesk service to more than 200 people. Design, development, and implementation of solutions of web based solutions like Internal dashboards built with HTML, JavaScript, CSS and PHP (MVC), for providing information to different areas. Delegate tasks to the outsource companies that provide applications as a service. IT Support and User Account Manager"
             }
         },
         "resumeProfItem2":{
@@ -109,39 +104,31 @@
             "resumeProfItem2Date": "2018 - 2018",
             "resumeProfItem2Local": "Fundação Casa da Música, Porto, Portugal",
             "resumeProfItem2Desc": {
-                "resumeProfItem2Desc1": "Replace an XML file creation program for cataloging elements multimedia, written in Visual Basic, by a web form, written in HTML, Javascript, CSS and PHP language.",
-                "resumeProfItem2Desc2": "Assessment and validation of new Application built for Casa da Musica restaurant.",
-                "resumeProfItem2Desc3": "Create a dynamic php page based on information from Current and next events to happen in Casa da Música, to be displayed on the Digital Signage system that Casa da Música is implementing."
+                "resumeProfItem2Desc1": "Replace an XML file creation program for cataloging elements multimedia, written in Visual Basic, by a web form, written in HTML, Javascript, CSS and PHP language. Assessment and validation of a new Application built for Casa da Música restaurant. Create a dynamic php page based on information from Current and next events to happen in Casa da Música, to be displayed on the Digital Signage system that Casa da Música is implementing."
             }
         },
         "resumeProfItem3":{
             "resumeProfItem3Title": "Front-End Developer",
-            "resumeProfItem3Date": "March 2023 - Maio 2023",
+            "resumeProfItem3Date": "March 2023 - May 2023",
             "resumeProfItem3Local": "MediaProbe, Porto, Portugal",
             "resumeProfItem3Desc": {
-                "resumeProfItem3Desc1": "Working on multiple projects with Angular",
-                "resumeProfItem3Desc2": "Building some new endpoints in typescript",
-                "resumeProfItem3Desc3": "Improve application navagability"
+                "resumeProfItem3Desc1": "Working on multiple projects with Angular(Mainly dashboards and internal tools). Improve application navigation and user experience"
             }
         },
         "resumeProfItem4":{
             "resumeProfItem4Title": "FullStack Developer",
-            "resumeProfItem4Date": "Maio 2023 - Setembro 2025",
+            "resumeProfItem4Date": "May 2023 - September 2025",
             "resumeProfItem4Local": "MediaProbe, Porto, Portugal",
             "resumeProfItem4Desc": {
-                "resumeProfItem4Desc1": "Desenvolver vários projetos em Angular",
-                "resumeProfItem4Desc2": "Construir novos endpoints para serem consumidos pelo frontend",
-                "resumeProfItem4Desc3": "Melhoramento da navegabilidade das aplicações"
+                "resumeProfItem4Desc1": "Working on multiple projects(Rest APIs & dashboards) some legacy and some new. Also working as a devops in AWS(Cloudfront, Route 53, Elastic Beanstalk, EC2, RDS)"
             }
         },
         "resumeProfItem5":{
             "resumeProfItem5Title": "Tech Lead Developer",
-            "resumeProfItem5Date": "Setembro 2025 - Present",
+            "resumeProfItem5Date": "September 2025 - Present",
             "resumeProfItem5Local": "MediaProbe, Porto, Portugal",
             "resumeProfItem5Desc": {
-                "resumeProfItem5Desc1": "Desenvolver vários projetos em Angular",
-                "resumeProfItem5Desc2": "Construir novos endpoints para serem consumidos pelo frontend",
-                "resumeProfItem5Desc3": "Melhoramento da navegabilidade das aplicações"
+                "resumeProfItem5Desc1": "Working on multiple projects(Design-DDD) implement guidelines and give x-learning session on coding best practices, CI/CD to the team and how to manage different environments and work together in same features"
             }
         }
     },

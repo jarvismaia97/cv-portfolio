@@ -143,7 +143,7 @@ const Hero = () => {
           
           <div className="flex flex-col">
             <div className="font-display text-3xl md:text-4xl font-bold text-text">
-              {animatedStats.hoursSupport.toLocaleString()}<span className="text-accent">h</span>
+            <span className="text-accent">+</span>{animatedStats.hoursSupport.toLocaleString()}<span className="text-accent">h</span>
             </div>
             <div className="font-mono text-xs uppercase tracking-wide text-text-dim mt-1">
               {content.about.counts.countHoursSupport}
@@ -152,7 +152,7 @@ const Hero = () => {
           
           <div className="flex flex-col">
             <div className="font-display text-3xl md:text-4xl font-bold text-text">
-              {animatedStats.hoursCoding.toLocaleString()}<span className="text-accent">h</span>
+            <span className="text-accent">+</span>{animatedStats.hoursCoding.toLocaleString()}<span className="text-accent">h</span>
             </div>
             <div className="font-mono text-xs uppercase tracking-wide text-text-dim mt-1">
               {content.about.counts.countHoursCoding}

@@ -32,8 +32,8 @@ const TechStack = () => {
       category: 'Languages',
       items: [
         { name: 'TypeScript', width: '95%' },
-        { name: 'JavaScript', width: '90%' },
-        { name: 'PHP', width: '75%' },
+        { name: 'JavaScript', width: '80%' },
+        { name: 'Python', width: '55%' },
         { name: 'SQL', width: '80%' }
       ]
     },
@@ -42,35 +42,35 @@ const TechStack = () => {
       items: [
         { name: 'Angular', width: '92%' },
         { name: 'React', width: '88%' },
-        { name: 'HTML/CSS', width: '95%' },
-        { name: 'Responsive Design', width: '90%' }
+        { name: 'Tailwind', width: '95%' },
+        { name: 'Vite', width: '90%' }
       ]
     },
     {
       category: 'Backend',
       items: [
         { name: 'Node.js', width: '85%' },
-        { name: 'PHP MVC', width: '78%' },
+        { name: 'Express', width: '78%' },
         { name: 'REST APIs', width: '90%' },
-        { name: 'Database Design', width: '82%' }
+        { name: 'ERD Design', width: '82%' }
       ]
     },
     {
       category: 'Infrastructure',
       items: [
         { name: 'Docker', width: '75%' },
-        { name: 'Azure', width: '70%' },
+        { name: 'AWS', width: '70%' },
         { name: 'Git/Version Control', width: '95%' },
-        { name: 'CI/CD', width: '65%' }
+        { name: 'Github Actions CI/CD', width: '85%' }
       ]
     },
     {
       category: 'Tools',
       items: [
-        { name: 'SharePoint', width: '85%' },
-        { name: 'Visual Studio', width: '90%' },
-        { name: 'Postman', width: '88%' },
-        { name: 'Browser Dev Tools', width: '95%' }
+        { name: 'Obsidian', width: '85%' },
+        { name: 'Visual Studio Code', width: '90%' },
+        { name: 'Bruno', width: '88%' },
+        { name: 'Beekeeper Studio', width: '85%' }
       ]
     },
     {
@@ -79,7 +79,7 @@ const TechStack = () => {
         { name: 'Problem Solving', width: '95%' },
         { name: 'Communication', width: '90%' },
         { name: 'Team Leadership', width: '85%' },
-        { name: 'Process Analysis', width: '92%' }
+        { name: 'Process Analysis', width: '88%' }
       ]
     }
   ];

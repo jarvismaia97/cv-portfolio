@@ -46,7 +46,6 @@ function App() {
       {konamiTriggered && (
         <div className="fixed inset-0 z-[99990] flex items-center justify-center pointer-events-none">
           <div className="text-center animate-fade-up" style={{ animationDuration: '0.5s' }}>
-            <div className="text-6xl mb-4">🎮</div>
             <div className="font-display text-3xl gradient-text">You found the secret!</div>
             <div className="font-mono text-sm text-accent mt-2">↑↑↓↓←→←→BA</div>
           </div>

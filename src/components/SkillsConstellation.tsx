@@ -10,28 +10,28 @@ interface Skill {
 
 const skills: Skill[] = [
   { name: 'TypeScript', size: 1.3, angle: 0, color: '#3178c6', category: 'tech' },
-  { name: 'Angular', size: 1.2, angle: 0.5, color: '#dd0031', category: 'tech' },
-  { name: 'Node.js', size: 1.15, angle: 1.0, color: '#68a063', category: 'tech' },
-  { name: 'React', size: 1.25, angle: 1.5, color: '#61dafb', category: 'tech' },
-  { name: 'Zod', size: 1.0, angle: 2.0, color: '#336791', category: 'tech' },
-  { name: 'Prisma', size: 1.0, angle: 2.0, color: '#336719', category: 'tech' },
-  { name: 'Docker', size: 1.1, angle: 2.5, color: '#2496ed', category: 'tech' },
-  { name: 'Bun', size: 0.9, angle: 3.0, color: '#777bb4', category: 'tech' },
-  { name: 'ElsyiaJS', size: 0.85, angle: 5.0, color: '#0078d4', category: 'tech' },
-  { name: 'JavaScript', size: 1.05, angle: 3.5, color: '#f7df1e', category: 'tech' },
-  { name: 'Tailwind', size: 1.0, angle: 4.0, color: '#e44d26', category: 'tech' },
-  { name: 'Git', size: 0.95, angle: 4.5, color: '#f05032', category: 'tech' },
-  { name: 'AWS', size: 0.8, angle: 5.5, color: '#0078d4', category: 'tech' },
-  { name: 'Leadership', size: 1.2, angle: 0.25, color: '#00e5a0', category: 'soft' },
-  { name: 'Problem Solving', size: 0.85, angle: 1.75, color: '#ff6b6b', category: 'soft' },
-  { name: 'Communication', size: 0.8, angle: 2.75, color: '#dc382d', category: 'soft' },
-  { name: 'Analysis', size: 0.9, angle: 3.75, color: '#666666', category: 'soft' },
-  { name: 'Automation', size: 0.85, angle: 4.75, color: '#42b883', category: 'soft' },
-  { name: 'Innovation', size: 1.0, angle: 5.75, color: '#ffd060', category: 'soft' },
+  { name: 'React', size: 1.25, angle: Math.PI * 0.2, color: '#61dafb', category: 'tech' },
+  { name: 'Angular', size: 1.15, angle: Math.PI * 0.4, color: '#dd0031', category: 'tech' },
+  { name: 'Node.js', size: 1.15, angle: Math.PI * 0.6, color: '#68a063', category: 'tech' },
+  { name: 'Prisma', size: 1.1, angle: Math.PI * 0.8, color: '#336719', category: 'tech' },
+  { name: 'Zod', size: 0.95, angle: Math.PI, color: '#336791', category: 'tech' },
+  { name: 'Docker', size: 1.05, angle: Math.PI * 1.2, color: '#2496ed', category: 'tech' },
+  { name: 'AWS', size: 0.95, angle: Math.PI * 1.4, color: '#ff9900', category: 'tech' },
+  { name: 'JavaScript', size: 1.1, angle: Math.PI * 1.6, color: '#f7df1e', category: 'tech' },
+  { name: 'Tailwind', size: 1.0, angle: Math.PI * 1.8, color: '#38bdf8', category: 'tech' },
+  { name: 'Git', size: 0.95, angle: Math.PI * 2.0, color: '#f05032', category: 'tech' },
+  { name: 'Bun', size: 0.9, angle: Math.PI * 2.2, color: '#777bb4', category: 'tech' },
+  { name: 'ElysiaJS', size: 0.85, angle: Math.PI * 2.4, color: '#0078d4', category: 'tech' },
+
+  { name: 'Leadership', size: 1.1, angle: Math.PI * 0.1, color: '#00e5a0', category: 'soft' },
+  { name: 'Problem Solving', size: 0.95, angle: Math.PI * 0.5, color: '#ff6b6b', category: 'soft' },
+  { name: 'Communication', size: 0.9, angle: Math.PI * 0.9, color: '#dc382d', category: 'soft' },
+  { name: 'Analysis', size: 0.95, angle: Math.PI * 1.3, color: '#666666', category: 'soft' },
+  { name: 'Automation', size: 0.9, angle: Math.PI * 1.7, color: '#42b883', category: 'soft' },
+  { name: 'Innovation', size: 1.1, angle: Math.PI * 2.1, color: '#ffd060', category: 'soft' },
 ];
 
 function colorWithAlpha(hex: string, alpha: string): string {
-  // Expand 3-digit hex to 6-digit
   if (hex.length === 4) {
     hex = '#' + hex[1] + hex[1] + hex[2] + hex[2] + hex[3] + hex[3];
   }

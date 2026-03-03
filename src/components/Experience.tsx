@@ -26,6 +26,20 @@ const Experience = () => {
   // Luís's actual experience from JSON
   const experiences = [
     {
+      date: content.resume.resumeProfItem5.resumeProfItem5Date,
+      role: content.resume.resumeProfItem5.resumeProfItem5Title,
+      company: content.resume.resumeProfItem5.resumeProfItem5Local,
+      description: content.resume.resumeProfItem5.resumeProfItem5Desc.resumeProfItem5Desc1,
+      tags: ['TypeScript', 'AWS', 'Software Architecture', 'REST APIs', 'CI/CD']
+    },
+    {
+      date: content.resume.resumeProfItem4.resumeProfItem4Date,
+      role: content.resume.resumeProfItem4.resumeProfItem4Title,
+      company: content.resume.resumeProfItem4.resumeProfItem4Local,
+      description: content.resume.resumeProfItem4.resumeProfItem4Desc.resumeProfItem4Desc1,
+      tags: ['NodeJS', 'TypeScript', 'AWS', 'CI/CD', 'REST APIs']
+    },
+    {
       date: content.resume.resumeProfItem3.resumeProfItem3Date,
       role: content.resume.resumeProfItem3.resumeProfItem3Title,
       company: content.resume.resumeProfItem3.resumeProfItem3Local,
@@ -36,7 +50,7 @@ const Experience = () => {
       date: content.resume.resumeProfItem1.resumeProfItem1Date,
       role: content.resume.resumeProfItem1.resumeProfItem1Title,
       company: content.resume.resumeProfItem1.resumeProfItem1Local,
-      description: content.resume.resumeProfItem1.resumeProfItem1Desc.resumeProfItem1Desc3,
+      description: content.resume.resumeProfItem1.resumeProfItem1Desc.resumeProfItem1Desc1,
       tags: ['HTML', 'JavaScript', 'CSS', 'PHP', 'Solutions Design', 'User Support']
     },
     {
@@ -44,20 +58,6 @@ const Experience = () => {
       role: content.resume.resumeProfItem2.resumeProfItem2Title,
       company: content.resume.resumeProfItem2.resumeProfItem2Local,
       description: content.resume.resumeProfItem2.resumeProfItem2Desc.resumeProfItem2Desc1,
-      tags: ['Visual Basic', 'Web Forms', 'XML', 'Digital Signage']
-    },
-    {
-      date: content.resume.resumeProfItem4.resumeProfItem4Date,
-      role: content.resume.resumeProfItem4.resumeProfItem4Title,
-      company: content.resume.resumeProfItem4.resumeProfItem4Local,
-      description: content.resume.resumeProfItem4.resumeProfItem4Desc.resumeProfItem4Desc1,
-      tags: ['Visual Basic', 'Web Forms', 'XML', 'Digital Signage']
-    },
-    {
-      date: content.resume.resumeProfItem5.resumeProfItem5Date,
-      role: content.resume.resumeProfItem5.resumeProfItem5Title,
-      company: content.resume.resumeProfItem5.resumeProfItem5Local,
-      description: content.resume.resumeProfItem5.resumeProfItem5Desc.resumeProfItem5Desc1,
       tags: ['Visual Basic', 'Web Forms', 'XML', 'Digital Signage']
     }
   ];

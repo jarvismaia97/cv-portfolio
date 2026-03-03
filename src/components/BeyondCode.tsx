@@ -14,6 +14,8 @@ interface LifeEvent {
   icon: IconType;
   title: string;
   description: string;
+  link?: string
+  linkName?: string
 }
 
 const lifeEvents: LifeEvent[] = [
@@ -21,19 +23,21 @@ const lifeEvents: LifeEvent[] = [
     year: '2019',
     icon: MdSportsTennis,
     title: 'Padel',
-    description: 'Started playing padel — now a regular on the courts.',
+    description: 'Started playing padel — now a registered player in the portuguese federation on the courts.',
   },
   {
     year: '2022',
     icon: MdDirectionsCar,
     title: 'Mustangs Club of Northern Portugal',
     description: 'Co-founded and board member of a Ford Mustang enthusiast club.',
+    link:'https://mustangclubedonorte.com/',
+    linkName: 'Mustang Clube do Norte'
   },
   {
     year: '2025',
     icon: MdRestaurant,
     title: 'Culinary Arts Course',
-    description: 'Completed a cooking course — because great code deserves great food.',
+    description: 'Completed two cooking course — because great code deserves great food. One normal food and other italian food',
   },
   {
     year: '2025',
@@ -44,14 +48,18 @@ const lifeEvents: LifeEvent[] = [
   {
     year: '2026',
     icon: MdGamepad,
-    title: 'Created Treta',
-    description: 'Built and launched a Portuguese word game — jogartreta.pt',
+    title: 'Created Game Treta',
+    description: 'Built and launched a Portuguese word game inspired in wordle from NYT',
+    link:'https://jogartreta.pt',
+    linkName: 'Treta'
   },
   {
     year: '2026',
     icon: MdPiano,
     title: 'Learning Piano',
-    description: 'Started learning piano on a Yamaha P-45.',
+    description: 'Started learning piano on a Yamaha P-45 because of Gibran Alcoocer',
+    link: 'https://www.youtube.com/watch?v=oepHBIr7QaA',
+    linkName: 'Idea 22 - Gibran Alcoocer'
   },
 ];
 
@@ -120,13 +128,19 @@ const BeyondCode = () => {
                 {event.title}
               </h3>
 
-              {/* Description */}
-              <p className="font-mono text-xs text-text-dim leading-relaxed">
-                {event.description}
-              </p>
-            </div>
-          );
-        })}
+            {/* Description */}
+            <p className="font-mono text-xs text-text-dim leading-relaxed">
+              {event.description}
+            </p>
+
+            {/* Link */}
+            {event.link && (
+              <a className="font-mono text-xs leading-relaxed" href={event.link}>
+                {event.linkName}
+              </a>
+            )}
+          </div>
+        )})}
       </div>
     </section>
   );

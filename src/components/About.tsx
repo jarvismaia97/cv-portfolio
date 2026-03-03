@@ -8,10 +8,10 @@ const About: React.FC = () => {
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
   const stats = [
-    { number: '132', label: content.about.counts.countProcess },
+    { number: '136', label: content.about.counts.countProcess },
     { number: '28', label: content.about.counts.countProjects },
-    { number: '8980h', label: content.about.counts.countHoursSupport },
-    { number: '3920h', label: content.about.counts.countHoursCoding },
+    { number: '900h', label: content.about.counts.countHoursSupport },
+    { number: '4000h', label: content.about.counts.countHoursCoding },
   ];
 
   const personalInfo = [
