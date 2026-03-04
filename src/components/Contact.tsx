@@ -57,14 +57,12 @@ const Contact = () => {
           <div className="reveal">
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal 
                          tracking-tight mb-6">
-              Let's build something{' '}
-              <em className="italic text-accent">great</em>
+              {content.contact.contactTitle1}{' '}
+              <em className="italic text-accent">{content.contact.contactTitle2}</em>
             </h2>
             
             <p className="text-base md:text-lg text-text-dim leading-relaxed">
-              Open to full-stack developer roles, consulting opportunities, and innovative 
-              projects. Based in {content.contact.contactAdress2}, available for remote 
-              and on-site collaboration.
+              {content.contact.contactTitle3}
             </p>
           </div>
 

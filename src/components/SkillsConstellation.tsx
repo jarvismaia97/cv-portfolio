@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-
+import { useLanguage } from '../context/LanguageContext';
 interface Skill {
   name: string;
   size: number;
@@ -164,6 +164,7 @@ function renderCanvas(
 }
 
 const SkillsConstellation = () => {
+  const { content } = useLanguage();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const stickyRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -256,9 +257,9 @@ const SkillsConstellation = () => {
         <canvas ref={canvasRef} style={{ display: 'block' }} />
 
         <div style={{ position: 'absolute', top: '2rem', left: '1.5rem', pointerEvents: 'none' }}>
-          <div className="section-tag" style={{ marginBottom: '0.5rem' }}>Core Competencies</div>
+          <div className="section-tag" style={{ marginBottom: '0.5rem' }}>{content.about.aboutCore}</div>
           <h2 className="font-display" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 400 }}>
-            Skill Constellation
+            {content.about.aboutSkills}
           </h2>
         </div>
       </div>

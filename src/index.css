@@ -411,7 +411,7 @@ body::after {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #00e5a0, #5090ff);
+  background: linear-gradient(135deg, #00e5a0, #3c2d19);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

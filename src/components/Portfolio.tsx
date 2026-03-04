@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 interface Project {
   type: string;
@@ -8,82 +9,15 @@ interface Project {
   metrics: { label: string; value: string }[];
 }
 
-const projects: Project[] = [
-  {
-    type: 'Word Game',
-    name: 'Treta',
-    description:
-      'A Portuguese Wordle clone built with Expo (React Native + Web). Multiple modes: 4/5/6/7 letters, daily challenge with streak tracking, share results with emoji grid. Live at jogartreta.pt.',
-    url: 'https://github.com/jarvismaia97/letreco',
-    metrics: [
-      { label: 'Tech', value: 'Expo' },
-      { label: 'Platform', value: 'Web + Mobile' },
-      { label: 'Status', value: 'Live' },
-    ],
-  },
-  {
-    type: 'Community Platform',
-    name: 'Mustang Clube do Norte',
-    description:
-      'Official website for the Mustangs Club of Northern Portugal. Built from scratch as co-founder and board member. Event management, member showcase, and club identity.',
-    url: 'https://github.com/lmaia-22/mustangclubedonorte',
-    metrics: [
-      { label: 'Tech', value: 'TypeScript' },
-      { label: 'Deploy', value: 'Vercel' },
-      { label: 'Status', value: 'Live' },
-    ],
-  },
-  {
-    type: 'SaaS Product',
-    name: 'Prima Prime',
-    description:
-      'My next big personal project — a full-stack SaaS application with a modern API architecture. Currently in active development, designing for scale from day one.',
-    url: 'https://github.com/lmaia-22/primaprime',
-    metrics: [
-      { label: 'Stage', value: 'Building' },
-      { label: 'Scope', value: 'Full-Stack' },
-      { label: 'Vision', value: 'SaaS' },
-    ],
-  },
-  {
-    type: 'AI Assistant',
-    name: 'Jarvis',
-    description:
-      'A personal AI assistant powered by OpenClaw with specialized sub-agents (designer, backend, frontend, crypto, QA, devops, research). Features skill-based architecture, ChromaDB long-term memory, and multi-agent orchestration.',
-    url: '#',
-    metrics: [
-      { label: 'Agents', value: '11' },
-      { label: 'Memory', value: 'ChromaDB' },
-      { label: 'Status', value: 'Active' },
-    ],
-  },
-  {
-    type: 'Education',
-    name: 'Blog Boa Nova — Teaching Day',
-    description:
-      'Gave a full-day programming class to 12th-grade students at Escola Boa Nova in Leça. Students built a blog from scratch, learning HTML, CSS, JavaScript, and deployment fundamentals.',
-    url: '#',
-    metrics: [
-      { label: 'Duration', value: 'Full Day' },
-      { label: 'Students', value: '12º Ano' },
-      { label: 'Impact', value: 'Mentoring' },
-    ],
-  },
-  {
-    type: 'Collaboration Tool',
-    name: 'Hotaru',
-    description:
-      'A shared clipboard platform with auth (Magic Link, GitHub, Google), paste expiration, public/private visibility controls, rate limiting, and real-time user search.',
-    url: 'https://github.com/lmaia-22/hotaru',
-    metrics: [
-      { label: 'Tech', value: 'Next.js' },
-      { label: 'Auth', value: 'Supabase' },
-      { label: 'Cache', value: 'Redis' },
-    ],
-  },
-];
-
 const Portfolio = () => {
+  const { content } = useLanguage();
+  const { sectionTag, sectionTitle, viewProject, projects } = content.keyProjects as {
+    sectionTag: string;
+    sectionTitle: string;
+    viewProject: string;
+    projects: Project[];
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -106,9 +40,9 @@ const Portfolio = () => {
     <section id="projects" className="py-32 px-6 md:px-12 section-bg">
       {/* Section header */}
       <div className="text-center mb-20">
-        <div className="section-tag mb-4 reveal">Selected Work</div>
+        <div className="section-tag mb-4 reveal">{sectionTag}</div>
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight reveal">
-          Key Projects
+          {sectionTitle}
         </h2>
       </div>
 
@@ -149,7 +83,7 @@ const Portfolio = () => {
 
             {project.url !== '#' && (
               <div className="mt-6 font-mono text-xs uppercase tracking-wide text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                View Project →
+                {viewProject}
               </div>
             )}
           </div>

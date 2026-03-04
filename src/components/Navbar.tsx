@@ -4,7 +4,7 @@ import { useLogoClicks } from '../hooks/useEasterEggs';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, content } = useLanguage();
   const { matrixMode, handleClick: handleLogoClick } = useLogoClicks();
 
   useEffect(() => {
@@ -48,11 +48,11 @@ const Navbar = () => {
       
       <ul className="hidden md:flex gap-8 list-none">
         {[
-          { label: 'Skills', id: 'skills' },
-          { label: 'Experience', id: 'experience' },
-          { label: 'Stack', id: 'stack' },
-          { label: 'Projects', id: 'projects' },
-          { label: 'Contact', id: 'contact' }
+          { label: content.nav.navSkills, id: 'skills' },
+          { label: content.nav.navExperience, id: 'experience' },
+          { label: content.nav.navStack, id: 'stack' },
+          { label: content.nav.navProjects, id: 'projects' },
+          { label: content.nav.navContact, id: 'contact' }
         ].map(({ label, id }) => (
           <li key={id}>
             <button

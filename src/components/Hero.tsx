@@ -166,13 +166,13 @@ const Hero = () => {
             onClick={() => scrollToSection('contact')}
             className="btn-primary"
           >
-            Get in touch
+            {content.about.aboutGIT}
           </button>
           <button
             onClick={() => scrollToSection('experience')}
             className="btn-ghost"
           >
-            View experience
+            {content.about.aboutEXP}
           </button>
         </div>
       </div>

@@ -1,47 +1,25 @@
 { 
-    "intro": "Sou um ",
-    "intro0": "de Portugal",
-    "intro1":"full stacker",
-    "intro2": "Sou um ",
-    "intro3": "Programador, Estudante, Projetista, Projetista, Ninja",
     "nav":{
-        "navLanguage":"PT/EN",
-        "navLanguageBtn": "setLanguage('en')",
-        "navHome": "Início",
-        "navAbout": "Sobre",
-        "navResume": "Currículo",
-        "navServices": "Serviços",
-        "navPortfolio": "Portfólio",
+        "navSkills": "Habilidades",
+        "navExperience": "Experiência",
+        "navStack": "Tecnologia",
+        "navProjects": "Projetos",
         "navContact": "Entre em contacto"
     },
     "about":{
         "aboutTitle1": "Sobre",
         "aboutTitle2": "Mais sobre mim",
-        "aboutText1": "Olá, o meu nome é Luis e sou de Portugal, sou especialista em encontrar/desenhar e construir sistemas simples, mas eficazes. Estes sistemas normalmente são orientados ao utilizador final, o que significa que as ideias dos programadores e as dos utilizadores nem sempre estão alinhadas. Mas ambas as partes têm que fazer um esforço. Quanto a mim, considero-me um bom orientador e uma pessoa motivada a nível profissional capaz de alinhar essas ideias. A um nível mais pessoal acredito ser um bom comunicador e conselheiro com bom gosto para carros e um bom jogador de padel também. esteja à vontade para entrar em contato ou dar uma vista de olhos nos meus trabalhos anteriores na seção do portfólio.",
-        "birthday": "Data de Nascimento:",
-        "birthdayValue": "22 Abril 1997",
-        "website": "Site:",
-        "websiteValue": "https://cv-portfolio-taupe.vercel.app/",
-        "phone": "Telemóvel:",
-        "phoneValue": "+351 pede-me",
-        "city": "Cidade:",
-        "cityValue": "Porto, Portugal",
-        "age": "Idade:",
-        "ageValue": "28",
-        "degree": "Grau de estudo:",
-        "degreeValue": "Licenciatura",
-        "email1": "Email:",
-        "email1Value":"luismsm14@gmail.com",
-        "freelance": "Freelance:",
-        "freelanceValue": "Disponível",
-        "aboutText2": "Um pouco mais sobre mim, adoro automação desde que descobri que era um pouco preguiçoso. Mas ser preguiçoso tem as suas vantagens, força-nos a encontrar maneiras de tornar a vida mais fácil para nós e para os outros, David Dunham diz que \"Eficiência é a preguiça inteligente\" e eu não poderia estar mais de acordo. Assim iniciei os meus estudos no Instituto Superior de Engenharia do Porto (ISEP) em 2015 no curso de Engenharia de Sistemas durante três anos. Em 2018 iniciei o meu estágio na Fundação Casa da Música como Técnico de Sistemas de Informação onde trabalhei com uma grande variedade de ferramentas, tais como SQL, PHP, HTML, CSS, Javascript, Sharepoint, Dynamics Nav, EDOC, o que me permitiu aprender novas competências e o mais importante, como comunicar com os clientes (colegas de trabalho). Por esse mesmo motivo, comecei a ter interesse em Pesquisar/Desenhar e construir soluções, neste caso aplicações web que facilitassem o trabalho através da análise de processos procurando pontos de melhoria. Às vezes a mais pequena mudança pode causar o maior impacto.",
+        "aboutText1": "Sou o Luís Maia, FullStack Developer focado em Tech Lead na Mediaprobe. A minha missão é desenhar soluções simples, mas robustas, sem nunca perder de vista a experiência do utilizador final. Encontrei o meu espaço a fazer a ponte entre os silos de Frontend e Backend — guiando equipas através de transições técnicas e motivando os developers a ver a 'visão global' da plataforma. Orgulho-me de ser um comunicador claro e um consultor técnico de confiança. Fora do horário de trabalho, encontras-me num campo de padel ou a explorar o mundo. Entra em contacto se quiseres saber mais.",
+        "aboutGIT": "Entra em Contacto",
+        "aboutEXP": "Ver Experiência",
+        "aboutCore": "Competências Fundamentais",
+        "aboutSkills": "Constelação de Habilidades",
         "counts":{
             "countProcess": "Processos Melhorados",
             "countProjects": "Projetos",
             "countHoursSupport": "Horas de Suporte",
             "countHoursCoding": "Horas de Programação"
         },
-        "aboutSkills": "Competências",
         "interestsTitle": "Interesses",
         "interests":{
             "interest1": "Programar",
@@ -352,5 +330,78 @@
             "message": "Mensagem",
             "liveAlertBtn": "Enviar Mensagem"
         }
+    },
+    "keyProjects": {
+        "sectionTag": "Trabalho Selecionado",
+        "sectionTitle": "Projetos Principais",
+        "viewProject": "Ver Projeto →",
+        "projects": [
+            {
+                "type": "Jogo de Palavras",
+                "name": "Treta",
+                "description": "Um clone do Wordle em português feito com Expo (React Native + Web). Vários modos: 4/5/6/7 letras, desafio diário com contagem de sequência, partilha de resultados com grelha de emojis. Online em jogartreta.pt.",
+                "url": "https://github.com/jarvismaia97/letreco",
+                "metrics": [
+                    { "label": "Tech", "value": "Expo" },
+                    { "label": "Plataforma", "value": "Web + Mobile" },
+                    { "label": "Estado", "value": "Online" }
+                ]
+            },
+            {
+                "type": "Plataforma de Comunidade",
+                "name": "Mustang Clube do Norte",
+                "description": "Site oficial do Mustangs Clube do Norte de Portugal. Construído de raiz como co-fundador e membro da direção. Gestão de eventos, showcase de membros e identidade do clube.",
+                "url": "https://github.com/lmaia-22/mustangclubedonorte",
+                "metrics": [
+                    { "label": "Tech", "value": "TypeScript" },
+                    { "label": "Deploy", "value": "Vercel" },
+                    { "label": "Estado", "value": "Online" }
+                ]
+            },
+            {
+                "type": "Produto SaaS",
+                "name": "Prima Prime",
+                "description": "O meu próximo grande projeto pessoal — uma aplicação SaaS full-stack com arquitetura de API moderna. Em desenvolvimento ativo, desenhado para escala desde o primeiro dia.",
+                "url": "https://github.com/lmaia-22/primaprime",
+                "metrics": [
+                    { "label": "Fase", "value": "Em construção" },
+                    { "label": "Âmbito", "value": "Full-Stack" },
+                    { "label": "Visão", "value": "SaaS" }
+                ]
+            },
+            {
+                "type": "Assistente IA",
+                "name": "Jarvis",
+                "description": "Um assistente de IA pessoal com OpenClaw e sub-agentes especializados (designer, backend, frontend, crypto, QA, devops, pesquisa). Arquitetura baseada em competências, memória de longo prazo ChromaDB e orquestração multi-agente.",
+                "url": "#",
+                "metrics": [
+                    { "label": "Agentes", "value": "11" },
+                    { "label": "Memória", "value": "ChromaDB" },
+                    { "label": "Estado", "value": "Ativo" }
+                ]
+            },
+            {
+                "type": "Educação",
+                "name": "Blog Boa Nova — Dia de Ensino",
+                "description": "Leccionei uma aula de programação de um dia completo a alunos do 12.º ano na Escola Boa Nova em Leça. Os alunos construíram um blog de raiz, aprendendo HTML, CSS, JavaScript e fundamentos de deployment.",
+                "url": "#",
+                "metrics": [
+                    { "label": "Duração", "value": "Dia completo" },
+                    { "label": "Alunos", "value": "12.º Ano" },
+                    { "label": "Impacto", "value": "Mentoria" }
+                ]
+            },
+            {
+                "type": "Ferramenta de Colaboração",
+                "name": "Hotaru",
+                "description": "Plataforma de clipboard partilhado com auth (Magic Link, GitHub, Google), expiração de pastes, controlos de visibilidade público/privado, rate limiting e pesquisa de utilizadores em tempo real.",
+                "url": "https://github.com/lmaia-22/hotaru",
+                "metrics": [
+                    { "label": "Tech", "value": "Next.js" },
+                    { "label": "Auth", "value": "Supabase" },
+                    { "label": "Cache", "value": "Redis" }
+                ]
+            }
+        ]
     }
 }
