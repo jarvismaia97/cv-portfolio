@@ -19,16 +19,16 @@ const skills: Skill[] = [
   { name: 'AWS', size: 0.95, angle: Math.PI * 1.4, color: '#ff9900', category: 'tech' },
   { name: 'JavaScript', size: 1.1, angle: Math.PI * 1.6, color: '#f7df1e', category: 'tech' },
   { name: 'Tailwind', size: 1.0, angle: Math.PI * 1.8, color: '#38bdf8', category: 'tech' },
-  { name: 'Git', size: 0.95, angle: Math.PI * 2.0, color: '#f05032', category: 'tech' },
-  { name: 'Bun', size: 0.9, angle: Math.PI * 2.2, color: '#777bb4', category: 'tech' },
-  { name: 'ElysiaJS', size: 0.85, angle: Math.PI * 2.4, color: '#0078d4', category: 'tech' },
+  { name: 'Git', size: 0.95, angle: Math.PI * 2.3, color: '#f05032', category: 'tech' },
+  { name: 'Bun', size: 0.9, angle: Math.PI * 2.5, color: '#777bb4', category: 'tech' },
+  { name: 'ElysiaJS', size: 0.85, angle: Math.PI * 3.1, color: '#0078d4', category: 'tech' },
 
-  { name: 'Leadership', size: 1.1, angle: Math.PI * 0.1, color: '#00e5a0', category: 'soft' },
-  { name: 'Problem Solving', size: 0.95, angle: Math.PI * 0.5, color: '#ff6b6b', category: 'soft' },
-  { name: 'Communication', size: 0.9, angle: Math.PI * 0.9, color: '#dc382d', category: 'soft' },
-  { name: 'Analysis', size: 0.95, angle: Math.PI * 1.3, color: '#666666', category: 'soft' },
-  { name: 'Automation', size: 0.9, angle: Math.PI * 1.7, color: '#42b883', category: 'soft' },
-  { name: 'Innovation', size: 1.1, angle: Math.PI * 2.1, color: '#ffd060', category: 'soft' },
+  { name: 'Leadership', size: 1.2, angle: Math.PI * 0.1, color: '#00e5a0', category: 'soft' },
+  { name: 'Problem Solving', size: 0.95, angle: Math.PI * 0.3, color: '#ff6b6b', category: 'soft' },
+  { name: 'Communication', size: 0.9, angle: Math.PI * 0.5, color: '#dc382d', category: 'soft' },
+  { name: 'Analysis', size: 0.95, angle: Math.PI * 0.9, color: '#666666', category: 'soft' },
+  { name: 'Automation', size: 0.9, angle: Math.PI * 1.1, color: '#42b883', category: 'soft' },
+  { name: 'Innovation', size: 1.1, angle: Math.PI * 1.3, color: '#ffd060', category: 'soft' },
 ];
 
 function colorWithAlpha(hex: string, alpha: string): string {
