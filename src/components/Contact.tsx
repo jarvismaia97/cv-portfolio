@@ -31,8 +31,8 @@ const Contact = () => {
     },
     {
       label: content.contact.contactLabelLinkedIn,
-      value: '/in/luismaia97',
-      url: 'https://www.linkedin.com/in/luismaia97',
+      value: '/in/luis-luis-maia-maia',
+      url: 'https://www.linkedin.com/in/luis-luis-maia-maia',
       icon: '💼'
     },
     {
