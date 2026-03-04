@@ -21,6 +21,55 @@
             "countHoursCoding": "Hours of Coding"
         }
     },
+    "beyondCode": {
+        "sectionTag": "Life Path",
+        "sectionTitle": "Beyond Code",
+        "sectionSubtitle": "Building things isn't limited to screens.",
+        "lifeEvents": [
+            {
+                "year": "2019",
+                "icon": "padel",
+                "title": "Padel",
+                "description": "Started playing padel — now a registered player in the Portuguese federation on the courts."
+            },
+            {
+                "year": "2022",
+                "icon": "car",
+                "title": "Mustangs Club of Northern Portugal",
+                "description": "Co-founded and board member of a Ford Mustang enthusiast club.",
+                "link": "https://mustangclubedonorte.com/",
+                "linkName": "Mustang Clube do Norte"
+            },
+            {
+                "year": "2025",
+                "icon": "restaurant",
+                "title": "Culinary Arts Course",
+                "description": "Completed two cooking courses — because great code deserves great food. One on general cuisine and one on Italian food."
+            },
+            {
+                "year": "2025",
+                "icon": "golf",
+                "title": "Golf",
+                "description": "Picked up golf — patience on and off the green."
+            },
+            {
+                "year": "2026",
+                "icon": "gamepad",
+                "title": "Created Game Treta",
+                "description": "Built and launched a Portuguese word game inspired by Wordle from NYT.",
+                "link": "https://jogartreta.pt",
+                "linkName": "Treta"
+            },
+            {
+                "year": "2026",
+                "icon": "piano",
+                "title": "Learning Piano",
+                "description": "Started learning piano on a Yamaha P-45, inspired by Gibran Alcoocer.",
+                "link": "https://www.youtube.com/watch?v=oepHBIr7QaA",
+                "linkName": "Idea 22 - Gibran Alcoocer"
+            }
+        ]
+    },
     "resume":{
         "resumeSummary": "I believe I am an innovative and deadline-driven web developer with over eight years of experience in designing and developing user-oriented systems.",
         "resumeEduItem1":{

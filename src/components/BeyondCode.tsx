@@ -8,62 +8,36 @@ import {
   MdPiano 
 } from 'react-icons/md';
 import type { IconType } from 'react-icons';
+import { useLanguage } from '../context/LanguageContext';
 
-interface LifeEvent {
+const ICON_MAP: Record<string, IconType> = {
+  padel: MdSportsTennis,
+  car: MdDirectionsCar,
+  restaurant: MdRestaurant,
+  golf: MdSportsGolf,
+  gamepad: MdGamepad,
+  piano: MdPiano,
+};
+
+interface LifeEventFromContent {
   year: string;
-  icon: IconType;
+  icon: string;
   title: string;
   description: string;
-  link?: string
-  linkName?: string
+  link?: string;
+  linkName?: string;
 }
 
-const lifeEvents: LifeEvent[] = [
-  {
-    year: '2019',
-    icon: MdSportsTennis,
-    title: 'Padel',
-    description: 'Started playing padel — now a registered player in the portuguese federation on the courts.',
-  },
-  {
-    year: '2022',
-    icon: MdDirectionsCar,
-    title: 'Mustangs Club of Northern Portugal',
-    description: 'Co-founded and board member of a Ford Mustang enthusiast club.',
-    link:'https://mustangclubedonorte.com/',
-    linkName: 'Mustang Clube do Norte'
-  },
-  {
-    year: '2025',
-    icon: MdRestaurant,
-    title: 'Culinary Arts Course',
-    description: 'Completed two cooking course — because great code deserves great food. One normal food and other italian food',
-  },
-  {
-    year: '2025',
-    icon: MdSportsGolf,
-    title: 'Golf',
-    description: 'Picked up golf — patience on and off the green.',
-  },
-  {
-    year: '2026',
-    icon: MdGamepad,
-    title: 'Created Game Treta',
-    description: 'Built and launched a Portuguese word game inspired in wordle from NYT',
-    link:'https://jogartreta.pt',
-    linkName: 'Treta'
-  },
-  {
-    year: '2026',
-    icon: MdPiano,
-    title: 'Learning Piano',
-    description: 'Started learning piano on a Yamaha P-45 because of Gibran Alcoocer',
-    link: 'https://www.youtube.com/watch?v=oepHBIr7QaA',
-    linkName: 'Idea 22 - Gibran Alcoocer'
-  },
-];
-
 const BeyondCode = () => {
+  const { content } = useLanguage();
+  const beyondCode = content.beyondCode as {
+    sectionTag: string;
+    sectionTitle: string;
+    sectionSubtitle: string;
+    lifeEvents: LifeEventFromContent[];
+  };
+  const { sectionTag, sectionTitle, sectionSubtitle, lifeEvents } = beyondCode;
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -86,19 +60,19 @@ const BeyondCode = () => {
     <section id="beyond-code" className="py-24 px-6 md:px-12 relative">
       {/* Section header */}
       <div className="text-center mb-16 reveal">
-        <div className="section-tag mb-4">Life Path</div>
+        <div className="section-tag mb-4">{sectionTag}</div>
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight">
-          Beyond Code
+          {sectionTitle}
         </h2>
         <p className="text-text-dim text-base md:text-lg mt-4 max-w-xl mx-auto">
-          Building things isn't limited to screens.
+          {sectionSubtitle}
         </p>
       </div>
 
       {/* Life events grid */}
       <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {lifeEvents.map((event, index) => {
-          const Icon = event.icon;
+          const Icon = ICON_MAP[event.icon] ?? MdSportsTennis;
           return (
             <div
               key={index}
@@ -135,7 +109,12 @@ const BeyondCode = () => {
 
             {/* Link */}
             {event.link && (
-              <a className="font-mono text-xs leading-relaxed" href={event.link}>
+              <a
+                className="font-mono text-xs leading-relaxed text-accent hover:underline mt-2 inline-block"
+                href={event.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {event.linkName}
               </a>
             )}

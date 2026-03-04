@@ -125,7 +125,7 @@ const Hero = () => {
         <div className="flex flex-wrap gap-8 md:gap-12 mb-12">
           <div className="flex flex-col">
             <div className="font-display text-3xl md:text-4xl font-bold text-text">
-              {animatedStats.processes}<span className="text-accent">+</span>
+            <span className="text-accent">+</span>{animatedStats.processes}
             </div>
             <div className="font-mono text-xs uppercase tracking-wide text-text-dim mt-1">
               {content.about.counts.countProcess}
@@ -134,7 +134,7 @@ const Hero = () => {
           
           <div className="flex flex-col">
             <div className="font-display text-3xl md:text-4xl font-bold text-text">
-              {animatedStats.projects}<span className="text-accent">+</span>
+            <span className="text-accent">+</span>{animatedStats.projects}
             </div>
             <div className="font-mono text-xs uppercase tracking-wide text-text-dim mt-1">
               {content.about.counts.countProjects}

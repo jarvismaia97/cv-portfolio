@@ -21,8 +21,57 @@
             "countHoursCoding": "Horas de Programação"
         }
     },
+    "beyondCode": {
+        "sectionTag": "Percurso de Vida",
+        "sectionTitle": "Para Além do Código",
+        "sectionSubtitle": "Construir coisas fora de um ecrã.",
+        "lifeEvents": [
+            {
+                "year": "2019",
+                "icon": "padel",
+                "title": "Padel",
+                "description": "Comecei a jogar padel — hoje sou jogador federado nos campos."
+            },
+            {
+                "year": "2022",
+                "icon": "car",
+                "title": "Mustangs Clube do Norte de Portugal",
+                "description": "Co-fundador e membro da direção de um clube de entusiastas do Ford Mustang.",
+                "link": "https://mustangclubedonorte.com/",
+                "linkName": "Mustang Clube do Norte"
+            },
+            {
+                "year": "2025",
+                "icon": "restaurant",
+                "title": "Curso de Artes Culinárias",
+                "description": "Concluí dois cursos de cozinha — porque bom código merece boa comida. Um de cozinha geral e outro de cozinha italiana."
+            },
+            {
+                "year": "2025",
+                "icon": "golf",
+                "title": "Golf",
+                "description": "Aprendi golf — paciência no green e fora dele."
+            },
+            {
+                "year": "2026",
+                "icon": "gamepad",
+                "title": "Criei o Jogo Treta",
+                "description": "Desenvolvi e lancei um jogo de palavras em português inspirado no Wordle da NYT.",
+                "link": "https://jogartreta.pt",
+                "linkName": "Treta"
+            },
+            {
+                "year": "2026",
+                "icon": "piano",
+                "title": "A Aprender Piano",
+                "description": "Comecei a aprender piano num Yamaha P-45, inspirado pelo Gibran Alcoocer.",
+                "link": "https://www.youtube.com/watch?v=oepHBIr7QaA",
+                "linkName": "Idea 22 - Gibran Alcoocer"
+            }
+        ]
+    },
     "resume":{
-        "resumeSummary": "Sou um programador Web inovador, com mais de 4 anos de experiência desenhando e desenvolvendo sistemas orientados ao utilizador final. Extremamente motivado para melhorar constantemente as minhas competências e crescer profissionalmente. Estou confiante nas minhas capacidades para criar e desenvolver as funcionalidades/ferramentas que permitam o crescimento rápido da solução.",
+        "resumeSummary": "Sou um programador Web inovador, com mais de 8 anos de experiência desenhando e desenvolvendo sistemas orientados ao utilizador final. Extremamente motivado para melhorar constantemente as minhas competências e crescer profissionalmente. Estou confiante nas minhas capacidades para criar e desenvolver as funcionalidades/ferramentas que permitam o crescimento rápido da solução.",
         "resumeEduItem1":{
             "resumeEduItem1Title": "Licenciatura em Engenharia Informática",
             "resumeEduItem1Date": "2021 - Atualmente",
