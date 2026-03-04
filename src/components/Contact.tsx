@@ -100,9 +100,6 @@ const Contact = () => {
             <p className="mb-4">
               "{content.contact.footerQuote}"
             </p>
-            <p className="text-xs uppercase tracking-wider">
-              {content.contact.footerAvailability}
-            </p>
           </div>
         </div>
       </div>
