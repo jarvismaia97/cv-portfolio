@@ -24,25 +24,25 @@ const Contact = () => {
 
   const contactLinks = [
     {
-      label: 'Email',
+      label: content.contact.contactLabelEmail,
       value: content.contact.contactEmail2,
       url: `mailto:${content.contact.contactEmail2}`,
       icon: '✉'
     },
     {
-      label: 'LinkedIn',
+      label: content.contact.contactLabelLinkedIn,
       value: '/in/luismaia97',
       url: 'https://www.linkedin.com/in/luismaia97',
       icon: '💼'
     },
     {
-      label: 'GitHub',
+      label: content.contact.contactLabelGitHub,
       value: '@lmaia-22',
       url: 'https://github.com/lmaia-22',
       icon: '🔗'
     },
     {
-      label: 'Location',
+      label: content.contact.contactLabelLocation,
       value: content.contact.contactAdress2,
       url: '#',
       icon: '📍'
@@ -98,11 +98,10 @@ const Contact = () => {
         <div className="mt-24 pt-12 border-t border-border text-center">
           <div className="font-mono text-sm text-text-dim">
             <p className="mb-4">
-              "I believe I am an innovative and deadline-driven web developer with over four years of experience 
-              in designing and developing user-oriented systems."
+              "{content.contact.footerQuote}"
             </p>
             <p className="text-xs uppercase tracking-wider">
-              Available for freelance work • Response within 24 hours
+              {content.contact.footerAvailability}
             </p>
           </div>
         </div>

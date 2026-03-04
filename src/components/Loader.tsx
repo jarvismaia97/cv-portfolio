@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 interface Props {
   onComplete: () => void;
@@ -6,6 +7,7 @@ interface Props {
 }
 
 const Loader = ({ onComplete, splineReady }: Props) => {
+  const { content } = useLanguage();
   const [progress, setProgress] = useState(0);
   const [hiding, setHiding] = useState(false);
   const completed = useRef(false);
@@ -44,7 +46,7 @@ const Loader = ({ onComplete, splineReady }: Props) => {
   return (
     <div className={`loader ${hiding ? 'hidden' : ''}`}>
       <div className="loader-name">Luís Maia</div>
-      <div className="loader-title">Loading experience</div>
+      <div className="loader-title">{content.loader.loadingText}</div>
       <div className="loader-bar">
         <div
           className="loader-bar-fill"

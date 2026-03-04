@@ -6,6 +6,11 @@
         "navProjects": "Projects",
         "navContact": "Contact"
     },
+    "hero": {
+        "titles": ["Tech Lead", "Full-Stack Developer", "Builder", "Problem Solver"],
+        "explore": "Explore",
+        "photoAlt": "Luís Maia"
+    },
     "about":{
         "aboutTitle1": "About",
         "aboutTitle2": "Learn more about me",
@@ -143,8 +148,50 @@
         "contactTitle2": "great",
         "contactTitle3": "Open to full-stack developer roles, consulting opportunities, and innovative projects. Based in Porto, Portugal, available for remote and on-site collaboration.",
         "contactAdress2": "Porto, Portugal",
-        "contactEmail2": "luismsm14@gmail.com"
+        "contactEmail2": "luismsm14@gmail.com",
+        "contactLabelEmail": "Email",
+        "contactLabelLinkedIn": "LinkedIn",
+        "contactLabelGitHub": "GitHub",
+        "contactLabelLocation": "Location",
+        "footerQuote": "I believe I am an innovative and deadline-driven web developer with over four years of experience in designing and developing user-oriented systems.",
+        "footerAvailability": "Available for freelance work • Response within 24 hours"
     },
+    "experience": {
+        "sectionTag": "Career Path",
+        "sectionTitle": "Experience & Leadership",
+        "tagSets": [
+            ["TypeScript", "AWS", "Software Architecture", "REST APIs", "CI/CD"],
+            ["NodeJS", "TypeScript", "AWS", "CI/CD", "REST APIs"],
+            ["Angular", "TypeScript", "Frontend", "Team Collaboration"],
+            ["HTML", "JavaScript", "CSS", "PHP", "Solutions Design", "User Support"],
+            ["Visual Basic", "Web Forms", "XML", "Digital Signage"],
+            ["C", "Algorithms", "Java", "Project Management"]
+        ]
+    },
+    "stack": {
+        "sectionTag": "Technical Proficiency",
+        "sectionTitle": "Tech Stack",
+        "categories": [
+            { "category": "Languages", "items": [{ "name": "TypeScript", "width": "95%" }, { "name": "JavaScript", "width": "80%" }, { "name": "Python", "width": "55%" }, { "name": "SQL", "width": "80%" }] },
+            { "category": "Frontend", "items": [{ "name": "Angular", "width": "92%" }, { "name": "React", "width": "88%" }, { "name": "Tailwind", "width": "95%" }, { "name": "Vite", "width": "90%" }] },
+            { "category": "Backend", "items": [{ "name": "Node.js", "width": "85%" }, { "name": "Express", "width": "78%" }, { "name": "REST APIs", "width": "90%" }, { "name": "ERD Design", "width": "82%" }] },
+            { "category": "Infrastructure", "items": [{ "name": "Docker", "width": "75%" }, { "name": "AWS", "width": "70%" }, { "name": "Git/Version Control", "width": "95%" }, { "name": "Github Actions CI/CD", "width": "85%" }] },
+            { "category": "Tools", "items": [{ "name": "Obsidian", "width": "85%" }, { "name": "Visual Studio Code", "width": "90%" }, { "name": "Bruno", "width": "88%" }, { "name": "Beekeeper Studio", "width": "85%" }] },
+            { "category": "Soft Skills", "items": [{ "name": "Problem Solving", "width": "95%" }, { "name": "Communication", "width": "90%" }, { "name": "Team Leadership", "width": "85%" }, { "name": "Process Analysis", "width": "88%" }] }
+        ]
+    },
+    "philosophy": {
+        "quoteStart": "The best solutions come from understanding that ",
+        "quoteHighlight": "efficiency is intelligent laziness",
+        "quoteEnd": "—finding the smartest way to solve tomorrow's problems today.",
+        "attribution": "— David Dunham"
+    },
+    "loader": { "loadingText": "Loading experience" },
+    "footer": {
+        "copyright": "© 2026 Luís Maia — Crafted with precision and passion",
+        "builtWith": "Built with React, TypeScript, Tailwind CSS, and Framer Motion"
+    },
+    "skillsConstellation": { "coreSkillsLabel": "CORE SKILLS", "name": "Luís Maia" },
     "keyProjects": {
         "sectionTag": "Selected Work",
         "sectionTitle": "Key Projects",

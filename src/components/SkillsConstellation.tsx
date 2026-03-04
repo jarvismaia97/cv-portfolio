@@ -46,7 +46,8 @@ function renderCanvas(
   canvas: HTMLCanvasElement,
   ctx: CanvasRenderingContext2D,
   progress: number,
-  time: number
+  time: number,
+  labels: { coreSkillsLabel: string; name: string }
 ) {
   const dpr = window.devicePixelRatio || 1;
   const w = canvas.width / dpr;
@@ -153,10 +154,10 @@ function renderCanvas(
     ctx.font = "11px 'IBM Plex Mono', monospace";
     ctx.textAlign = 'center';
     ctx.letterSpacing = '0.2em';
-    ctx.fillText('CORE SKILLS', cx, cy - 8);
+    ctx.fillText(labels.coreSkillsLabel, cx, cy - 8);
     ctx.fillStyle = '#e8e4dc';
     ctx.font = "italic 24px 'Playfair Display', serif";
-    ctx.fillText('Luís Maia', cx, cy + 22);
+    ctx.fillText(labels.name, cx, cy + 22);
     ctx.globalAlpha = 1;
   }
 
@@ -165,6 +166,8 @@ function renderCanvas(
 
 const SkillsConstellation = () => {
   const { content } = useLanguage();
+  const labelsRef = useRef(content.skillsConstellation as { coreSkillsLabel: string; name: string });
+  labelsRef.current = content.skillsConstellation as { coreSkillsLabel: string; name: string };
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const stickyRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -213,7 +216,7 @@ const SkillsConstellation = () => {
     const animate = (time: number) => {
       if (!running) return;
       resize();
-      renderCanvas(canvas, ctx, progressRef.current, time);
+      renderCanvas(canvas, ctx, progressRef.current, time, labelsRef.current);
       animRef.current = requestAnimationFrame(animate);
     };
 

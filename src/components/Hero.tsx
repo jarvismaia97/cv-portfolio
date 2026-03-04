@@ -18,12 +18,7 @@ const Hero = () => {
     hoursCoding: 3920
   };
 
-  const titles = [
-    "Tech Lead",
-    "Full-Stack Developer", 
-    "Builder",
-    "Problem Solver"
-  ];
+  const titles = content.hero.titles as string[];
 
   const [currentTitle, setCurrentTitle] = useState(0);
 
@@ -186,7 +181,7 @@ const Hero = () => {
           />
           <img
             src="/images/me.jpg"
-            alt="Luís Maia"
+            alt={content.hero.photoAlt}
             className="relative w-40 h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-cover object-top rounded-full"
             style={{
               border: '2px solid rgba(0,229,160,0.2)',
@@ -199,7 +194,7 @@ const Hero = () => {
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator">
         <span className="font-mono text-xs uppercase tracking-wider text-text-dim mb-2">
-          Explore
+          {content.hero.explore}
         </span>
         <div className="scroll-dot"></div>
       </div>
