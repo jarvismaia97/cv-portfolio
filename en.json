@@ -200,7 +200,7 @@
                 "type": "Word Game",
                 "name": "Treta",
                 "description": "A Portuguese Wordle built with React Native. Multiple modes: 4/5/6/7 letters, daily challenge with streak tracking, share results, compete with friends and history mode.",
-                "url": "https://github.com/jarvismaia97/letreco",
+                "url": "https://jogartreta.pt",
                 "metrics": [
                     { "label": "Tech", "value": "React Native" },
                     { "label": "Platform", "value": "Web + Mobile(WPA)" },
